@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Notes and Ping Pong Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .notes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: black;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .game {
+            margin: 20px 0;
+        }
+        canvas {
+            border: 1px solid black;
+            background-color: #000;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="background.png" class="image-placeholder">
+    <h1>Welcome to My Homepage</h1>
+    <div class="notes">
+        <a class="card" href="week3/week3.html">Week 3 Notes</a>
+        <a class="card" href="week4/week4.html">Week 4 Notes</a>
+        <a class="card" href="week5/week5.html">Week 5 Notes</a>
+        <a class="card" href="week6/week6.html">Week 6 Notes</a>
+        <a class="card" href="week7/week7.html">Week 7 Notes</a>
+        <a class="card" href="week8/week8.html">Week 8 Notes</a>
+        <a class="card" href="week9/week9.html">Week 9 Notes</a>
+        <a class="card" href="week10/week10.html">Week 10 Notes</a>
+        <a class="card" href="week11/week11.html">Week 11 Notes</a>
+    </div>
+    <div class="game">
+        <h2>Ping Pong Game</h2>
+        <canvas id="game" width="600" height="400"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('game');
+        const context = canvas.getContext('2d');
+
+        const paddleWidth = 10;
+        const paddleHeight = 100;
+        const ballSize = 10;
+
+        let gameStarted = false;
+        let ballSpeedIncrement = 0.1;
+
+        const player = {
+            x: 0,
+            y: canvas.height / 2 - paddleHeight / 2,
+            width: paddleWidth,
+            height: paddleHeight,
+            dy: 0
+        };
+
+        const computer = {
+            x: canvas.width - paddleWidth,
+            y: canvas.height / 2 - paddleHeight / 2,
+            width: paddleWidth,
+            height: paddleHeight,
+            dy: 4
+        };
+
+        const ball = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            size: ballSize,
+            dx: 5,
+            dy: 5
+        };
+
+        function drawRect(x, y, width, height, color) {
+            context.fillStyle = color;
+            context.fillRect(x, y, width, height);
+        }
+
+        function drawBall(x, y, size, color) {
+            context.fillStyle = color;
+            context.beginPath();
+            context.arc(x, y, size, 0, Math.PI * 2);
+            context.fill();
+        }
+
+        function update() {
+            if (!gameStarted) return;
+
+            // Move player paddle
+            player.y += player.dy;
+            // Prevent player paddle from going out of bounds
+            if (player.y < 0) {
+                player.y = 0;
+            } else if (player.y + player.height > canvas.height) {
+                player.y = canvas.height - player.height;
+            }
+            // Move computer paddle
+            if (ball.y < computer.y + computer.height / 2) {
+                computer.y -= computer.dy;
+            } else {
+                computer.y += computer.dy;
+            }
+            // Prevent computer paddle from going out of bounds
+            if (computer.y < 0) {
+                computer.y = 0;
+            } else if (computer.y + computer.height > canvas.height) {
+                computer.y = canvas.height - computer.height;
+            }
+            // Move ball
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+            // Ball collision with top and bottom walls
+            if (ball.y < 0 || ball.y + ball.size > canvas.height) {
+                ball.dy *= -1;
+            }
+            // Ball collision with paddles
+            if (ball.x < player.x + player.width && ball.y > player.y && ball.y < player.y + player.height) {
+                ball.dx *= -1;
+                ball.dx += ball.dx > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
+                ball.dy += ball.dy > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
+            } else if (ball.x + ball.size > computer.x && ball.y > computer.y && ball.y < computer.y + computer.height) {
+                ball.dx *= -1;
+                ball.dx += ball.dx > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
+                ball.dy += ball.dy > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
+            }
+            // Ball out of bounds
+            if (ball.x < 0 || ball.x + ball.size > canvas.width) {
+                gameStarted = false;
+                ball.x = canvas.width / 2;
+                ball.y = canvas.height / 2;
+                ball.dx = 4;
+                ball.dy = 4;
+            }
+        }
+
+        function draw() {
+            // Clear canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw paddles
+            drawRect(player.x, player.y, player.width, player.height, 'white');
+            drawRect(computer.x, computer.y, computer.width, computer.height, 'white');
+
+            // Draw ball
+            drawBall(ball.x, ball.y, ball.size, 'white');
+
+            // Display Text when it is not started
+            if (!gameStarted) {
+                context.fillStyle = 'white';
+                context.font = '30px Arial';
+                context.fillText('Click to Start', canvas.width / 2 - 100, canvas.height / 2 - 50);
+            }
+        }
+
+        function loop() {
+            update();
+            draw();
+            requestAnimationFrame(loop);
+        }
+
+        function keyDown(event) {
+            if (event.key === 'ArrowUp' || event.key === 'w') {
+                player.dy = -6;
+            } else if (event.key === 'ArrowDown' || event.key === 's') {
+                player.dy = 6;
+            }
+        }
+
+        function keyUp(event) {
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown'
+                || event.key === 'w' || event.key === 's'
+            ) {
+                player.dy = 0;
+            }
+        }
+
+        function startGame() {
+            if (!gameStarted) {
+                gameStarted = true;
+                ball.dx = 4;
+                ball.dy = 4;
+            }
+        }
+
+        canvas.addEventListener('click', startGame);
+        document.addEventListener('keydown', keyDown);
+        document.addEventListener('keyup', keyUp);
+
+        window.addEventListener('deviceorientation', (event) => {
+            if (gameStarted) {
+                const tilt = event.gamma; // left-to-right tilt in degrees
+                player.dy = tilt > 10 ? 6 : tilt < -10 ? -6 : 0;
+            }
+        });
+
+        loop();
+    </script>
+</body>
+</html>

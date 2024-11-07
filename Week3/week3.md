@@ -13,6 +13,7 @@
 - Explain why bonds with different maturities can have same interest rate
 
 ## The Rist Structure of Interest Rates
+
 - Why same maturities have different interest rates?
   - Risk (The most important)
   - Liquidity
@@ -26,58 +27,73 @@
 - Note that the US Treasury Bond is thought of as a risk-free comparator
 
 ## The Risk Structure of Interest Rates
+
 ### Default Risk
+
 - Default risk (or credit risk) is the risk that the bond issuer will fail to make payments of interest or principal
 - Measuring Default Risk
   - The default risk premium on a bond is the difference between the interest rate on the bond and the interest rate on a Treasury bond with the same maturity. (Compare with some Treasury bond)
   - Many investors rely on credit rating agencies to provide them with information on the creditworthiness of corporations and governments (This is of severe problem because of the <u>**The Subprime Mortgage Crisis**</u>)
 
 ### Determining the Default Risk Premium in Yields
+
 - Higher the price => lower the risk
 - As the default risk on corporate bonds increases, the demand for corporate bonds shifts to the left in panel (a), and the demand for Treasury bonds shifts to the right in panel (b).
 - Note that the coorporate bond and treasury bond are kind of substitution of each other
+- 
 ![alt text](<Change of price of the two bonds.png>)
 
 #### Some Insights
+
 - Therefore, by looking at the interactions with these two quatity, we can see an economic slow-down.
+- 
 ![alt text](<Some Examples from the Global Crisis from 2007 - 2009.png>)
 
 ### Liquidity and Informaton Costs
+
 - *Investors* care about liquidity, so they are willing to accpet a lower interest rate on more liquid investments.
 - Spending time and money acquiring information on a bond reduces the bond's expected return.
 - A change in a bond's liquidity or the cost of acquiring information about the bond affects its *demand*
 
 ### Tax Treatement
+
 - Investors care about the return they receive left after paying their taxes
 - Recall the two types of income from owning bonds:
   - interest income from coupons – taxed at the same rates as wage and salary income. 
   - capital gains or losses from price changes on the bonds – taxed at a lower rate than interest rate, and taxed only if they are realized, i.e., a bold sold at a higher price than paid for.
+
 #### Some insights
+
 - Note that if the federal income tax rate increases, the coorporate bonds are more attractive since they get exempt from the income tax.
   - Increase in coorporate bond price && Decrease in Treasury Bond
 
 - If it is not tax examplt anymore:
-- ![alt text](<Not tax example.png>)
+
+![alt text](<Not tax example.png>)
 
 ### Summary
+
 ![alt text](<Summary on bond interest rate effects.png>)
 
 
 ## Term Structure
 => Bonds differ in terms of maturities  
 => Treasury Yield Curve: i and maturities
-  - Most of the time: this should be a upward slope => long term rate > short term rate
-  - Some of the time: this becomes a downward slope => long term rate < short term rate
-    - The second graph is typically an indication of going into a recession or in a recession
-    - Government decisions typically affects the long-term-rate. If the long term rate is lower, then this implies the coorporate / government is not doing a good job (maybe not investing enough, maybe not heading into a correct a direction, the market is lacking confidence of the government / coorporate).
+
+- Most of the time: this should be a upward slope => long term rate > short term rate
+- Some of the time: this becomes a downward slope => long term rate < short term rate
+  - The second graph is typically an indication of going into a recession or in a recession
+  - Government decisions typically affects the long-term-rate. If the long term rate is lower, then this implies the coorporate / government is not doing a good job (maybe not investing enough, maybe not heading into a correct a direction, the market is lacking confidence of the government / coorporate).
 
 ### Negative Interest Rate (!!! What the Hack!!!)
 DATA => Three stylised Facts
+
 - LTR > STR (usually)
 - STR >> LTR (Occasionally)
 - STR and LTR highly correclated (co-movement)
 
 ### Models
+
 - Expectation Theory
 - Segmented Market Theory
 - Liquidity Premium Theory
@@ -175,4 +191,5 @@ This second term is typically known.
 - Investors are likely to prefer short-term bonds over longer-term bonds
 
 #### Compare to Expectation Theory
+
 ![alt text](<Comparison Graph.png>)
