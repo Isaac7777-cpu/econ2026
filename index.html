@@ -60,6 +60,8 @@
             }
         }
     </style>
+    <!-- Add a pixel-like font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <img src="background.png" class="image-placeholder">
@@ -112,7 +114,8 @@
             y: canvas.height / 2 - paddleHeight / 2,
             width: paddleWidth,
             height: paddleHeight,
-            dy: 4
+            dy: 4, // Current speed
+            maxSpeed: 10 // Maximum allowed speed
         };
 
         const ball = {
@@ -122,6 +125,14 @@
             dx: 5,
             dy: 5
         };
+
+        // Add a trail array to store previous ball positions
+        const ballTrail = [];
+        const maxTrailLength = 20; // Number of trail points
+
+        // Initialize score variables
+        let playerScore = 0;
+        let computerScore = 0;
 
         function drawRect(x, y, width, height, color) {
             context.fillStyle = color;
@@ -146,25 +157,34 @@
             } else if (player.y + player.height > canvas.height) {
                 player.y = canvas.height - player.height;
             }
-            // Move computer paddle
-            if (ball.y < computer.y + computer.height / 2) {
-                computer.y -= computer.dy;
-            } else {
-                computer.y += computer.dy;
-            }
+
+            // Smoothly move computer paddle towards the ball's y position
+            const targetY = ball.y - computer.height / 2;
+            const easingFactor = 0.10; // Adjust between 0 (no movement) and 1 (instant movement)
+            computer.y += (targetY - computer.y) * easingFactor;
+
             // Prevent computer paddle from going out of bounds
             if (computer.y < 0) {
                 computer.y = 0;
             } else if (computer.y + computer.height > canvas.height) {
                 computer.y = canvas.height - computer.height;
             }
+
             // Move ball
             ball.x += ball.dx;
             ball.y += ball.dy;
+
+            // Add current ball position to the trail
+            ballTrail.push({ x: ball.x, y: ball.y });
+            if (ballTrail.length > maxTrailLength) {
+                ballTrail.shift(); // Remove the oldest trail point
+            }
+
             // Ball collision with top and bottom walls
             if (ball.y < 0 || ball.y + ball.size > canvas.height) {
                 ball.dy *= -1;
             }
+
             // Ball collision with paddles
             if (ball.x < player.x + player.width && ball.y > player.y && ball.y < player.y + player.height) {
                 ball.dx *= -1;
@@ -174,14 +194,39 @@
                 ball.dx *= -1;
                 ball.dx += ball.dx > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
                 ball.dy += ball.dy > 0 ? ballSpeedIncrement : -ballSpeedIncrement;
+
+                // Add random portion (50% to 100%) of ballSpeedIncrement to computer.dy
+                // Multiply by 2 to make up of the fact that the ball speed is increased when it hits the player's paddle
+                const based_portion = 0.6
+                const randomIncrement = 2 * ((1 - based_portion) * ballSpeedIncrement + Math.random() * (based_portion * ballSpeedIncrement)); // Random between based portion and 1 * ballSpeedIncrement
+                computer.dy += randomIncrement;
+
+                // Ensure computer.dy does not exceed maxSpeed
+                if (computer.dy > computer.maxSpeed) {
+                    computer.dy = computer.maxSpeed;
+                }
             }
+
             // Ball out of bounds
             if (ball.x < 0 || ball.x + ball.size > canvas.width) {
+                // Update scores
+                if (ball.x < 0) {
+                    computerScore++;
+                } else {
+                    playerScore++;
+                }
+
                 gameStarted = false;
                 ball.x = canvas.width / 2;
                 ball.y = canvas.height / 2;
                 ball.dx = 4;
                 ball.dy = 4;
+
+                // Reset computer.dy to initial speed
+                computer.dy = 4;
+
+                // Clear ball trail
+                ballTrail.length = 0;
             }
         }
 
@@ -189,19 +234,63 @@
             // Clear canvas
             context.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw paddles
+            // Draw net
+            context.strokeStyle = 'white';
+            context.lineWidth = 2;
+            context.setLineDash([10, 15]); // Dash pattern: 10px dash, 15px gap
+            context.beginPath();
+            context.moveTo(canvas.width / 2, 0);
+            context.lineTo(canvas.width / 2, canvas.height);
+            context.stroke();
+            context.setLineDash([]); // Reset dash
+
+            // Draw player paddle as white
+            context.fillStyle = 'white';
             drawRect(player.x, player.y, player.width, player.height, 'white');
+
+            // Draw computer paddle as white
+            context.fillStyle = 'white';
             drawRect(computer.x, computer.y, computer.width, computer.height, 'white');
 
-            // Draw ball
-            drawBall(ball.x, ball.y, ball.size, 'white');
+            // Draw ball with radial gradient
+            const ballGradient = context.createRadialGradient(ball.x, ball.y, ball.size / 2, ball.x, ball.y, ball.size);
+            ballGradient.addColorStop(0, 'white');
+            ballGradient.addColorStop(1, 'lightgray');
+            context.fillStyle = ballGradient;
+            drawBall(ball.x, ball.y, ball.size, ballGradient);
+
+            // Draw ball trail
+            context.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            let traceSize = ball.size * 0.8;
+            for (let i = 0; i < ballTrail.length; i++) {
+                const pos = ballTrail[i];
+                const alpha = (i + 1) / ballTrail.length * 0.5; // Decreasing opacity
+                const size = traceSize - ((ballTrail.length - i) / ballTrail.length) * traceSize * 0.6; // Decreasing size
+                context.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+                drawBall(pos.x, pos.y, size, context.fillStyle);
+            }
+
+            // Draw scores on two sides of the net
+            context.fillStyle = 'white';
+            context.font = '24px "Press Start 2P"'; // Updated font to pixel-like
+            
+            // Player score on the left side of the net
+            context.fillText(playerScore, canvas.width / 2 - 60, 30);
+            
+            // Computer score on the right side of the net
+            context.fillText(computerScore, canvas.width / 2 + 40, 30);
 
             // Display Text when it is not started
             if (!gameStarted) {
+                // Set text alignment to center for the "Click to Start" message
+                context.textAlign = 'center';
                 context.fillStyle = 'white';
-                context.font = '30px Arial';
-                context.fillText('Click to Start', canvas.width / 2 - 100, canvas.height / 2 - 50);
+                context.font = '30px "Press Start 2P"'; // Updated font to pixel-like
+                context.fillText('Click to Start', canvas.width / 2, canvas.height / 2 - 50);
             }
+
+            // Reset text alignment if necessary for other texts
+            context.textAlign = 'left'; // or the default value as needed
         }
 
         function loop() {
