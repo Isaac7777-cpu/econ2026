@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week4.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="learning-objectives">Learning Objectives</h1>
+<ul>
+<li>Understand the basic operations of the stock market</li>
+<li>Explain how stock prices are determined</li>
+<li>Explain the connection between the assumption of rational expectations and the efficient markets hypothesis</li>
+<li>Discuss the actual efficiency of financial markets</li>
+<li>Discuss the basic concepts of behavioural finance</li>
+</ul>
+<h1 id="last-week-summary">Last Week Summary</h1>
+<ul>
+<li>Interest Rate
+<ul>
+<li>Risk Structure (Bonds)
+<ul>
+<li>Same Maturity</li>
+<li>Differ in Risk</li>
+<li>Defaul Risk Premium $\rightarrow$ Compensation for the risk
+<ul>
+<li>$\text{Default risk premium} = i_{Bond} - i_{Safe ; Asset}$</li>
+<li>$\uparrow$ Default risk premium $\implies$ $\downarrow$ Demand $\implies \downarrow$ Price $\implies \uparrow i$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Term Structure (Bonds)
+<ul>
+<li>Same Risk Structure</li>
+<li>Differ in Maturities</li>
+<li>The important tool is the yield curve. $\rightarrow$ Idicator of the way we are going
+<ul>
+<li>Shows the relationship between interest rate and maturities</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="Lec3Summary.png" alt="This is the summary of lecture 3"></p>
+<h2 id="yield-curves">Yield curves</h2>
+<ul>
+<li>The first one is the only good one, how the nature should be.</li>
+<li>The second one is the indicator for things that are goin wrong.</li>
+<li>The third one is also an indicator for things going bad.</li>
+</ul>
+<p><img src="PossibleYieldCurves.png" alt="Possible Yield Curves"></p>
+<h2 id="estimation-of-the-future-short-term-rate-ien">Estimation of the future short term rate $i^e_{n}$</h2>
+<h3 id="3-facts">3 Facts</h3>
+<ol>
+<li>$i^{long-term} &gt; i^{short-term}$</li>
+<li>Sometimes $i^{short} \geq i^{long}$</li>
+<li>Co-movement between the short-term rate and the long-term rate</li>
+</ol>
+<h3 id="3-theories">3 Theories</h3>
+<ul>
+<li>Expectation Theory
+<ul>
+<li>$\displaystyle i_{2t} = \frac{i_t + i^e_{t+1}}{2}$</li>
+<li>Good to explain co-movement</li>
+<li>Fails to explain the first and second fact above.</li>
+</ul>
+</li>
+<li>Segmented Market Theorem
+<ul>
+<li>Good to explain why the long-term rate is generally higher than the short-term rate</li>
+</ul>
+</li>
+<li>Liquidity Premium Theory
+<ul>
+<li>The nice one that explains everything</li>
+<li>$\displaystyle i_{2t} = \frac{i_t + i^e_{t+1}}{2} + l_t$</li>
+<li>The last term improves the expectation theory by giving the ability to explain why the long-term is typically higher than the short-term</li>
+</ul>
+</li>
+</ul>
+<h2 id="bond-market-model">Bond Market Model</h2>
+<p>If you have an upward slopping yield curve,
+<img src="ExplainWithUpwardYieldCurve.png" alt="Why Goes up?"></p>
+<ul>
+<li>Note that this is particularly important to consider that the supply of the long-term bond is more wanted by the company.</li>
+</ul>
+<h1 id="stocks-and-the-stock-market">Stocks and the Stock Market</h1>
+<ul>
+<li><strong>A stockholder (or shareholder)</strong> has a legal claim on the firm's profits and on its equity (assets minus liabilities).</li>
+<li><strong>Stocks</strong> are called equities because ownership of stocks represents partial ownership of a firm</li>
+<li><strong>A sole proprietor</strong> (sole owner) is someone who owns a firm and has unlimited liability for the firm's debts.</li>
+<li><strong>An investor</strong> who owns stock in a firm organised as a corporation is protected by limited liability</li>
+<li><strong>Corporations</strong> are run by the boards of directors who appoint officers, such as CEO, CFO, COO.</li>
+<li><strong>Dividend</strong> is a payment that a corporation makes to stockholders (similar to coupon in bond).</li>
+<li><strong>Two types of stockholders:</strong>
+<ul>
+<li>Preferred stockholders $\implies$ receive a fixed dividend that is set when the corporation issues the stock</li>
+<li>Common stockholders receive a dividend that fluctuates as the profitability of the corporation varies over time.</li>
+<li>Mostly common</li>
+</ul>
+</li>
+<li>A firm's market capitalisation is the total market value of a firm's common and preferred stock.</li>
+</ul>
+<h1 id="stocks-and-the-stock-market">Stocks and the Stock Market</h1>
+<ul>
+<li>A publicly traded company is a corporation that sells stock in the stock market =&gt; Only a small portion</li>
+<li>...Some other things about the stock</li>
+</ul>
+<h2 id="measuring-the-performance-of-the-stock-market">Measuring the Performance of the Stock Market</h2>
+<ul>
+<li><strong>A stock market index</strong> is an average of stock prices that is used to measure the overall performance of the stock market.</li>
+<li><strong>Fluctuations in the Stock Market</strong>
+<ul>
+<li>More risk, risky than bonds</li>
+</ul>
+</li>
+</ul>
+<h2 id="does-the-performance-of-the-stock-market-matter-to-the-economy">Does the Performance of the Stock Market Matter to the Economy?</h2>
+<ul>
+<li>Fluctuations in stock prices can affect the economy by affecting the spending of households and firms</li>
+<li>Corporations: Important source of funds</li>
+<li>Households: IMportant part of wealth!
+<ul>
+<li>$\uparrow P_{stock} \implies \uparrow wealth \implies \uparrow Spending$</li>
+<li>Then, this loops back to the funds to the company $\implies$ positive loop back</li>
+<li>$\uparrow Fluctuations\implies$ $\uparrow \text{Uncertainty (Unlike by Economists, affecting the economics decision)} \implies \text{Negatively Affect Economic Decision}$</li>
+<li>Why negative?
+<ul>
+<li>Cosumers: Delay spending</li>
+<li>Firms: Delay investment</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-determine-the-stock-price">How to Determine the Stock Price?</h2>
+<ul>
+<li><strong>The price of a financial asset</strong> is equal to the present value of the payments to be received from owning it.</li>
+<li><strong>The required return on equities</strong> $(k_e)$ is the expected return necessary to compensate for the risk of investing in stocks
+<ul>
+<li>Remember that stock is riskier than bonds. Hence it is the expected returns in the bonds market</li>
+</ul>
+</li>
+<li>The equity premium is the additional return investors must receive in order to invest in equities rather Treasury bills.</li>
+<li>The equity preium consists of two components:
+<ul>
+<li>Systematic risk -- price fluctuations in the stock market that affect all stocks</li>
+<li>Unsystematic (idosyncratic) risk -- movements in the price of that particular stock.</li>
+</ul>
+</li>
+</ul>
+<h3 id="fomulation">Fomulation</h3>
+<p>$$k_e = \text{&quot;the expected return&quot; necessary to compensate for Risk}$$
+Note the basic assumption here is that if we don't get $k_e$ will not hold a stock.
+$$P_S = \text{Expected PV of payments received \hspace{10pt} (More uncertainty and factors that contributes to this)}$$
+$$P^S_0 \text{(Price of stock today)} = \frac{D_1}{1 + k_e} + \frac{P^S_1}{1 + k_e}$$
+Note that both the dividends and present price in the future are two unknown. The first term is the PV of the dividends, then second term is the PV of the next year's stock price
+$$Equity , Premium = k_e - i_b$$
+,where $i_b$ is the risk free rates on the treasury bonds (safe assets). Note that the Equity Premium will change over times.</p>
+<ul>
+<li>Systematic Risk : Associated to the market</li>
+<li>Unsystematic (idosyncratic) risk : Associated to corporation</li>
+</ul>
+<h4 id="rate">Rate</h4>
+<p>$$\text{Rate of Return on Bonds} = \frac{\text{Coupon}}{\text{Initial Price}} + \frac{\text{Capital Gain/Loss}}{\text{Initial Price}}$$
+,where the first term is the coupon yield (known), and the second part is unknown.</p>
+<p>Then, similary, we can get:
+$$\text{Rate of Return on Stocks} = \frac{\text{&quot;Expected&quot; Dividends}}{\text{Initial Price}} + \frac{\text{Capital Gain/Loss}}{\text{Initial Price}}$$
+,now we have two unknowns (both terms are unknown). Therefore, we have larger uncertainty in the stock market.</p>
+<p>$$Rt = \frac{D^e_{t+1}}{P_t} + \frac{P^e_{t+1} - P_t}{P_t}$$
+,where $R_t$ is the rate of return. <u>This is the same as the word formulat above.</u> Note that there are difference between the tax on dividends, and tax on capital gains.<br>
+Note that the <u>Tax on Dividends is subject</u> to double taxation. The following is an illustration of a possible situation.</p>
+<p><img src="Double Taxation on Dividends.png" alt="Double Tax for Dividends"></p>
+<p>Now, as a certified economist, we care more about the effect of such an economic action.</p>
+<ul>
+<li>
+<p>Problems Associated of Double Taxations</p>
+<ul>
+<li>Shareholder
+<ul>
+<li>$\downarrow \text{After-tax return} \implies \downarrow \text{Demands} \implies \uparrow \text{Inefficiency}$</li>
+</ul>
+</li>
+<li>Firms
+<ul>
+<li>Retain profit $\implies$ Re-invest $\implies$ might generate inefficiency.</li>
+<li>if <strong>rate of return from re-investment</strong> &lt; <strong>rate of return from other users</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Taxes on Capital Gain $\rightarrow$ &quot;Lock-in&quot; effect $\implies$ Inefficiency.</p>
+</li>
+</ul>
+<p>Then, why we want to have tax if it creates inefficiency? We are reducing inequalities. This is a typical <u><strong>equalty-efficiency trade-off</strong></u></p>
+<h3 id="stock-price-formula">Stock Price Formula</h3>
+<p>$$P_0^S = \frac{D_1}{(1 + k_e)^1} + \cdots + \frac{D_n}{(1 + k_e)^n} + \frac{P_n}{(1 + k_e)^n}$$
+Note that as $n \rightarrow \infty$, you can ignore the last term since it goes to zero.</p>
+<p>Therefore, if $n$ is large enough, $P_0$ is not affected by $P_n$.
+$$P^S_0 = \sum_{t=1}^\infty \frac{D_t}{(1+k_e)^t}$$</p>
+<p>However, the above formula is very hard to calculate since it very hard to know all the values of the dividends. We call this $(P^S_0)$ the <em><strong>&quot;fundamental value of stock&quot;</strong></em>.</p>
+<h3 id="simpler-values">Simpler Values</h3>
+<p>However, we do have a simpler models that calculate $P_0^S$, which is Gordern-Growth Model:
+$$P_0^S = \frac{(1+g)D_0}{(k_e - g)}$$
+,where $D_0$ is the current dividend. We also have to assume the growth rate, $g$ of the dividend. This is assuming the expected profit is increasing.
+$$\uparrow \pi^e \text{(expected profit)} \implies \uparrow \text{expected divs.} \implies \uparrow g \implies \uparrow P_0 \text{(2 ways)}$$
+Therefore, by involving a little economics here, which is the implication on recession,
+$$\text{Recession} \implies \downarrow \pi^e \implies \downarrow \mathbb{E}{\text{Dividends}} \implies \downarrow g$$
+Also,
+$$\uparrow Unvertainty \implies \uparrow \text{High discount of futures} \implies \uparrow k_e$$
+Therefore, both factors above will lead to decrease in the current price of stocks.</p>
+<h3 id="now-we-are-in-a-recession-what-will-happen">Now, We are in a Recession... What will happen?</h3>
+<p>Monetary Policy: $\downarrow i$ to overcome recession</p>
+<ul>
+<li>1st Channel (Bond):
+<ul>
+<li>$\downarrow i \implies \downarrow \text{Return on bonds} \implies \downarrow k_e = i_b + \text{eq. premium} \implies \uparrow P^S_0$</li>
+</ul>
+</li>
+<li>2nd Channel (Stock):
+<ul>
+<li>$\downarrow i \implies \uparrow \text{Econ Activities} \implies \uparrow \pi^{future} \implies \uparrow \text{Div} \implies \uparrow g \implies \uparrow P^S_0$</li>
+</ul>
+</li>
+</ul>
+<p>Therefore, we can clearly both channels will cause the increase in stock priceses because of the positive effects on both the growth rate and the expected rate.</p>
+<h4 id="assumptions-of-the-gordon-growth-rate-model">Assumptions of the Gordon-Growth Rate Model</h4>
+<p>Note that these assumptions are typically quite strong, particularly the assumption of the growth rate is a constant.</p>
+<h2 id="how-stock-prices-are-determined">How Stock Prices are Determined?</h2>
+<ul>
+<li>The price is set by the buyer willing to pay the highest price
+<ul>
+<li>The market price will be set by the buyer who can take best advantage of the asset</li>
+</ul>
+</li>
+<li>Superior information about an asset can increase its value by redicing its perceived risk.
+<ul>
+<li>Information is important for individuals to value each asset</li>
+<li>When new information is released about a firm, expectations and prices change</li>
+<li>Market participants constantly receive information and revise their expectations, so stock prices change frequently.</li>
+</ul>
+</li>
+</ul>
+<h1 id="rational-expectations-re-and-efficient-market-hypothesis-emh">Rational Expectations (RE) and Efficient Market Hypothesis (EMH)</h1>
+<ul>
+<li><strong>Expectations:</strong> are important in the economy because many transactions require participants to forecast the future</li>
+<li><strong>Adaptive expectations:</strong> People make forecasts of future values of a variable using only past values of the variable
+<ul>
+<li>Changes in expectations will occur slowly over time as data changes</li>
+<li>However, people use more than just past data to form their expectatios and sometimes change their expectations quickly.</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-theory-of-re">The Theory of RE</h2>
+<ul>
+<li>Expectations will be identical to optimal forecasts using all variables available.</li>
+</ul>
+<p>The following is the adaptive expectation:
+$$\pi^e_t = (1-\lambda)\pi_{t-1} + (1-\lambda)\lambda\pi_{t-2}$$</p>
+<p>However, this is not useful since it only focus on the past and not useful to forecast into the future.</p>
+<p>The expected value of an economic variable $X$ should be the optimally forecasted value of the varaible.
+$$X^e = X^{Of} (\neq X^{Actual} \text{ is OK!!})$$</p>
+<p>Note that $X^C - X^{Actual} =: \text{Forecast Error}$ should not be able to be predicted and have zero mean. Note that these two features are called <u><em><strong>Rational Expectation</strong></em></u>.</p>
+<h3 id="rational-expectation-decision-process-example">Rational Expectation Decision Process Example</h3>
+<ul>
+<li>Interest rate $(i)$ $\rightarrow$ $i^{normal}$</li>
+<li>$i^{today} &gt; i^{normal}$</li>
+<li>Optimal Forecast $\implies \downarrow i^{future} ;; (i^{future} \rightarrow i^{normal})$ approaches.</li>
+<li>News arrive: if $i$ is high, $i$ will stay high.</li>
+<li>Then, revise your optimal forecast: $\uparrow i^{future}$.</li>
+</ul>
+<p>Note that how the expectation is changed when a new news arrived. You use all available information!</p>
+<h2 id="implications-fo-the-theory-of-the-re">IMplications fo the Theory of the RE</h2>
+<p><em><strong>The Efficient Market Hypothesis!!!</strong></em></p>
+<h2 id="the-efficient-market-hypothesis">The Efficient Market Hypothesis</h2>
+<ul>
+<li>At the beginning of the period, we know $P_t$ and $D$</li>
+<li>$P_{t+1}$ is unknown and we must form an expectation of it.</li>
+<li>The expected return then is
+$$R^e = \frac{P^e_{t+1} - P_t + D}{P_t}$$</li>
+<li>Expectations of future prices are equal to optimal forecasts using all currently available information so
+$$P^e_{t+1} = P^{of}_{t+1} \implies R^e = R^{of}$$</li>
+<li>Supply and Demand analysis states $R^e$ will the equilibrium return $R^<em>$, $R^{of} = R^</em>$.</li>
+<li>Current prices in a financial market will be set so that the optimal forecast of a security's return using all available information equals the security's equilibrium return.</li>
+<li>In an efficient market, a security's price fully reflects all available information.</li>
+</ul>
+<h3 id="rational-behind-the-emh">Rational Behind the EMH</h3>
+<p>$$R^{of} &gt; R^* \implies P_t \uparrow \implies R^{of} \downarrow$$
+$$R^{of} &lt; R^* \implies P_t \downarrow \implies R^{of} \uparrow$$
+$$untill$$
+$$R^{of} = R^*$$
+Note that the first step of the two things above happen with the market force stepping in and interfere the price.</p>
+<p>In an efficient market, all unexploited profit opportunities will be eliminated.</p>
+<h3 id="the-emh-arbitrage">The EMH: Arbitrage</h3>
+<ul>
+<li>Financial abitrage is the process of bying and selling securities to profit from price changes over a brief preiod of time.</li>
+<li>The profits made from financial arbitrage are called arbitrage profits</li>
+<li>As long as there are some traders with rational expectations, the arbitrage...</li>
+<li>All you need to know: Application of the rational expectaion and it says that it simply says that the stock market price should be able to represent the fundamental price of a stock.</li>
+</ul>
+<h3 id="the-emh-are-stock-prices-predictable">The EMH: Are Stock Prices Predictable?</h3>
+<ul>
+<li>A key implication of the efficient markets hypothesis is that stock prices are not predictable. The price today reflects all available information</li>
+<li>Rather than being predictable, stock prices follow a random walk</li>
+</ul>
+<h3 id="efficient-markets-and-investment-strategies">Efficient Markets and Investment Strategies</h3>
+<ul>
+<li>Portfolio Allocation
+<ul>
+<li>The efficient markets hypothesis implies that we should hold a diversified portfolio of stocks and other assets, instead of only one stock.</li>
+<li>News that may unfavorable affect the price of one stock can be offset by news tha will favorably affect the price of another stock.</li>
+</ul>
+</li>
+<li>Trading
+<ul>
+<li>It is better to buy and hold a diversified portfolio over a long period of time than to churn a portfolio by moving funds repeatedly between stocks.</li>
+</ul>
+</li>
+</ul>
+<h2 id="anomalies-with-efficient-market-hypothesis">Anomalies with Efficient Market Hypothesis</h2>
+<ul>
+<li>Some analysts believe they have identified stock trading strategies that can result in above average.</li>
+<li>Mean reversion - the tendency for stocks that have recently been earning high returns to experience low returns in the future, and vice versa. =&gt; Typically stick to the mean.</li>
+<li>Momentum investing - persistence occurs in stock movements so that a stock that is increasing in price is more likely to continue to rise, and vice versa (the opposite of mean reversion)</li>
+</ul>
+<h2 id="behavioral-finance">Behavioral Finance</h2>
+<ul>
+<li>Behavioral finance is the application of concepts from behavioral economics to understand how people make choices in financial markets.</li>
+<li>Behavioral economics is the study of situations in which people make choices that do not appear to be economically rational.</li>
+<li>People may not realize that their actions are inconsistent with their goals, e.g., being unrealistic about their future behavior.</li>
+<li>Some investors believe they see useful patterns in plots of past stock prices even if the prices are actually following a random walk.</li>
+<li>Investors also show a reluctance to admit mistakes by selling their losing investments.</li>
+<li>All you need to know:
+<ul>
+<li>Although the EMH provides some explaination for the market, it is not perfect and behavioral economics &amp; finance provide explaination to these observations that were not explained by EMH.</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

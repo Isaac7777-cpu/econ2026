@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>week3.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="money-and-banking-lecutre-3">Money and Banking Lecutre 3</h1>
+<ul>
+<li>Negative relationship between $i$ and $P_{Bond}$</li>
+</ul>
+<h2 id="how-is-i-determined">How is i determined?</h2>
+<ul>
+<li>Bond Market Model =&gt; Classical
+<ul>
+<li>i decreases druing resestory</li>
+<li>Fisher Effect : increase of pi6l implies increase to i</li>
+</ul>
+</li>
+<li>LPF =&gt; Keynesian : Market supply and interest rate -&gt; Liquitity Effect</li>
+</ul>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Explain why bonds with the same maturity can have different interest rates</li>
+<li>Explain why bonds with different maturities can have same interest rate</li>
+</ul>
+<h2 id="the-rist-structure-of-interest-rates">The Rist Structure of Interest Rates</h2>
+<ul>
+<li>Why same maturities have different interest rates?
+<ul>
+<li>Risk (The most important)</li>
+<li>Liquidity</li>
+<li>Information costs</li>
+<li>Taxation</li>
+</ul>
+</li>
+<li>The risk structure of interest rates is the relationship among interest rates on bonds that have different characteristics but the same maturity.</li>
+</ul>
+<pre class="hljs"><code><div>  Deposit risk premium = Interst rates on a bond - Interest rate on US Treasury Bond（國債）
+</div></code></pre>
+<ul>
+<li>Note that the US Treasury Bond is thought of as a risk-free comparator</li>
+</ul>
+<h2 id="the-risk-structure-of-interest-rates">The Risk Structure of Interest Rates</h2>
+<h3 id="default-risk">Default Risk</h3>
+<ul>
+<li>Default risk (or credit risk) is the risk that the bond issuer will fail to make payments of interest or principal</li>
+<li>Measuring Default Risk
+<ul>
+<li>The default risk premium on a bond is the difference between the interest rate on the bond and the interest rate on a Treasury bond with the same maturity. (Compare with some Treasury bond)</li>
+<li>Many investors rely on credit rating agencies to provide them with information on the creditworthiness of corporations and governments (This is of severe problem because of the <u><strong>The Subprime Mortgage Crisis</strong></u>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="determining-the-default-risk-premium-in-yields">Determining the Default Risk Premium in Yields</h3>
+<ul>
+<li>Higher the price =&gt; lower the risk</li>
+<li>As the default risk on corporate bonds increases, the demand for corporate bonds shifts to the left in panel (a), and the demand for Treasury bonds shifts to the right in panel (b).</li>
+<li>Note that the coorporate bond and treasury bond are kind of substitution of each other
+<img src="Change of price of the two bonds.png" alt="alt text"></li>
+</ul>
+<h4 id="some-insights">Some Insights</h4>
+<ul>
+<li>Therefore, by looking at the interactions with these two quatity, we can see an economic slow-down.
+<img src="Some Examples from the Global Crisis from 2007 - 2009.png" alt="alt text"></li>
+</ul>
+<h3 id="liquidity-and-informaton-costs">Liquidity and Informaton Costs</h3>
+<ul>
+<li><em>Investors</em> care about liquidity, so they are willing to accpet a lower interest rate on more liquid investments.</li>
+<li>Spending time and money acquiring information on a bond reduces the bond's expected return.</li>
+<li>A change in a bond's liquidity or the cost of acquiring information about the bond affects its <em>demand</em></li>
+</ul>
+<h3 id="tax-treatement">Tax Treatement</h3>
+<ul>
+<li>Investors care about the return they receive left after paying their taxes</li>
+<li>Recall the two types of income from owning bonds:
+<ul>
+<li>interest income from coupons – taxed at the same rates as wage and salary income.</li>
+<li>capital gains or losses from price changes on the bonds – taxed at a lower rate than interest rate, and taxed only if they are realized, i.e., a bold sold at a higher price than paid for.</li>
+</ul>
+</li>
+</ul>
+<h4 id="some-insights">Some insights</h4>
+<ul>
+<li>
+<p>Note that if the federal income tax rate increases, the coorporate bonds are more attractive since they get exempt from the income tax.</p>
+<ul>
+<li>Increase in coorporate bond price &amp;&amp; Decrease in Treasury Bond</li>
+</ul>
+</li>
+<li>
+<p>If it is not tax examplt anymore:</p>
+</li>
+<li>
+<p><img src="Not tax example.png" alt="alt text"></p>
+</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p><img src="Summary on bond interest rate effects.png" alt="alt text"></p>
+<h2 id="term-structure">Term Structure</h2>
+<p>=&gt; Bonds differ in terms of maturities<br>
+=&gt; Treasury Yield Curve: i and maturities</p>
+<ul>
+<li>Most of the time: this should be a upward slope =&gt; long term rate &gt; short term rate</li>
+<li>Some of the time: this becomes a downward slope =&gt; long term rate &lt; short term rate
+<ul>
+<li>The second graph is typically an indication of going into a recession or in a recession</li>
+<li>Government decisions typically affects the long-term-rate. If the long term rate is lower, then this implies the coorporate / government is not doing a good job (maybe not investing enough, maybe not heading into a correct a direction, the market is lacking confidence of the government / coorporate).</li>
+</ul>
+</li>
+</ul>
+<h3 id="negative-interest-rate--what-the-hack">Negative Interest Rate (!!! What the Hack!!!)</h3>
+<p>DATA =&gt; Three stylised Facts</p>
+<ul>
+<li>LTR &gt; STR (usually)</li>
+<li>STR &gt;&gt; LTR (Occasionally)</li>
+<li>STR and LTR highly correclated (co-movement)</li>
+</ul>
+<h3 id="models">Models</h3>
+<ul>
+<li>Expectation Theory</li>
+<li>Segmented Market Theory</li>
+<li>Liquidity Premium Theory</li>
+</ul>
+<h3 id="expectation-theory">Expectation Theory</h3>
+<pre class="hljs"><code><div>  Interest rate of long-term bonds = *Average* of *Expected* Interest on Short-term Bonds
+</div></code></pre>
+<ul>
+<li>The short term expected interest rate decreases if the economics are going into recession.</li>
+</ul>
+<h4 id="assumptions"><em>Assumptions</em></h4>
+<p>Two key assumptions:</p>
+<ul>
+<li>Investors have the same investment objectives.</li>
+<li>For a given holding period, investors view bonds of different maturities as being perfect substitutes for one another (bonds are perfect substitutes).</li>
+</ul>
+<h4 id="example-two-strategies"><em>Example: Two strategies</em></h4>
+<ul>
+<li>
+<p>Buy and Hold</p>
+<ul>
+<li>$$1(1 + i_{2t})(1 + i_{2t})$</li>
+<li>$i_{2t}$ = interest rates on 2 year bond</li>
+<li>$ER = $1(1 + i_{2t})(1 + i_{2t}) - $1 = 2i_{2t} + (i_{2t})^2$, $ER$ is the expected return</li>
+<li>Note that the second term in the right hand side is almost zero, so approximately
+$$ER \approx 2i_{2t}  $$</li>
+</ul>
+</li>
+<li>
+<p>Roll-over</p>
+<ul>
+<li>$$1(1 + i_{t})(1 + i^e_{t+1})$</li>
+<li>$i_{t}$ = interest rates on 1 year bond</li>
+<li>$i^e_{t+1}$ interest rate on 1 year bond <em>expected</em> for next period.
+$$ ER \approx i_{t} + i^e_{t+1}$$</li>
+</ul>
+</li>
+</ul>
+<p>Therefore, both bonds will be held only if
+$$ ER^{Buy , &amp; , Hold} = ER^{Rollover} $$
+Hence, we make this decision only if
+$$ i_{2t} = \frac{i_t + i^e_{t+1}}{2} $$
+<strong>Notice that $i_{2t}$ and $i_t$ is known and $i^e_{t+1}$ is something we need calculate.</strong></p>
+<p>Then, generalising to n years:
+$$ i_{nt} = \frac{i_t + i^e_{t+1} + \cdots + i^e_{t+n-1}}{n} $$</p>
+<h4 id="shortcoming-of-the-expectations-theory"><em>ShortComing of the Expectations Theory</em></h4>
+<ul>
+<li>The expectations theory explains an upward-sloping yield curve as the result of investors expecting future short-term rates to be higher than the current short-term rate.</li>
+<li>But if the yield curve is typically upward sloping, investors must be expecting short-term rates to rise most of the time.</li>
+<li>This explanation seems unlikely because short-term rates are about as likely to fall as to rise at any given time.</li>
+</ul>
+<h3 id="segmented-markets-theory">Segmented Markets Theory</h3>
+<ul>
+<li>
+<p>Segmented markets theory holds that the interest rate on a bond of a particular maturity is determined only by the demand and supply of bounds of that maturity</p>
+</li>
+<li>
+<p>Two related observations:</p>
+<ul>
+<li>Investors in the bond market do not all have the same objectives.</li>
+<li>Investors do not see bonds of different maturities as being perfect substitutes of each other.</li>
+</ul>
+</li>
+<li>
+<p>Segmented markets means that investors in the market for bonds of one maturity do not participate in markets for bonds of other maturities.</p>
+<ul>
+<li>If investor interested in short-term, they don't look at long-term and vice versa.</li>
+</ul>
+</li>
+<li>
+<p>Compared to short-term bonds, long-term bonds are subject to greater interest-rate risk, and they are often less liquid.</p>
+</li>
+<li>
+<p>The yield curve is typically upward sloping because more investors are in the market for short-term bonds, causing their prices to be higher and their interest rates lower than long-term bonds.</p>
+</li>
+<li>
+<p>But the segmented markets theory cannot explain a downward-sloping yield curve, or why interest rates of all maturities tend to rise and fall together.</p>
+</li>
+</ul>
+<h3 id="the-liquid-premium-theory-lpt">The Liquid Premium Theory (LPT)</h3>
+<p>The term structure of Interest Rate
+$$ i_{nt} = \frac{i_t + i^e_{t+1} + \cdots + i^e_{t+n-1}}{n} + l_{nt}$$
+where $l_{nt}$ is the liquidity premium for the n-period bond at time $t$, $l_{nt}$ is always positive. This typically rises with the term to maturity(time).</p>
+<p>Note that this is very similar to the expectation theorem, but only the second term captures the liquidity of the product (which is the essence of the Segmented Market Theory.)<br>
+This second term is typically known.</p>
+<h4 id="observations">Observations</h4>
+<ol>
+<li>Interest rates on different maturities move together (as we have seen for the US Treasury)
+<ul>
+<li>This is explained by the first term</li>
+</ul>
+</li>
+<li>For the interest rate maturity plot
+<ul>
+<li>Upward slopping curve:
+<ul>
+<li>Yield slopes upward when the short terms are low</li>
+<li>This is explained by the second term</li>
+</ul>
+</li>
+<li>Downard sloping curve:
+<ul>
+<li>Yield curve is inverted explained by a low expected average (first term)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Yield curves are typically upward-slopping, which is explained by the second term (liquidity premium).</li>
+</ol>
+<h4 id="explanations-to-the-observations-from-the-model">Explanations to the Observations from the Model</h4>
+<ul>
+<li>Interest rates on different maturity bonds move together over time; explained by the first term in the equation.</li>
+<li>Yield curves tend to slope upward when short-term rates are low and to be inverted when short-term rates are high; <u>explained by the liquidity premium term in the first case and by a low expected average in the second case.</u></li>
+<li>Yield curves typically slope upward; explained by a larger liquidity premium as the term to maturity lengthens.</li>
+</ul>
+<h4 id="problems">Problems</h4>
+<ul>
+<li>Note that the second term (liquidity term) is often not easy to get, it often takes time. Therefore, the expectation theory is often used as a fallback.</li>
+<li>Liquidity premium theory (also called as Preferred Habitat Theory) holds that the interest rate on a long-term bond is an avrage of th interest rates investors expect on short-term bonds over the lifetime of the long-term bond, olus a term premium</li>
+<li>Term preium is the additional interest investors require in order to willing to buy a long-term bond rather than a comparable sequence of short-term bonds</li>
+</ul>
+<h4 id="formulation">Formulation</h4>
+<ul>
+<li>Investors have a preference for bonds of one maturity over another</li>
+<li>They will be willing to buy bonds of different maturities only if they earn a somewhat higher expected return</li>
+<li>Investors are likely to prefer short-term bonds over longer-term bonds</li>
+</ul>
+<h4 id="compare-to-expectation-theory">Compare to Expectation Theory</h4>
+<p><img src="Comparison Graph.png" alt="alt text"></p>
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>week10.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="summary-of-week9">Summary of Week9</h1>
+<ul>
+<li>Definition of Aggregate Demand</li>
+<li>Aggregate Supply Curve
+<ul>
+<li>Short-run aggregate supply curve (SRAS)</li>
+<li>Long-run aggregate supply curve (LRAS)</li>
+</ul>
+</li>
+<li>Philips Curve
+<ul>
+<li>Look at inflation rate and employment rate instead of inflation rate and output</li>
+<li>$\pi = \pi^e - w(u-u_n) + \rho$
+<ul>
+<li>$w$ is the weights of the unemployment gap</li>
+<li>$\rho$ is the price shocks</li>
+<li>$\pi^e$ inflation expectation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Okun's Law
+<ul>
+<li>Relates output gap and unemployment gap</li>
+<li>$U - U_n = \frac{1}{2}(y - y_p)$</li>
+<li>$U- U_n$ is unemployment gap</li>
+<li>$y - y_P$ is the output gap</li>
+</ul>
+</li>
+<li>Philips Curves:
+<ul>
+<li>$\pi = \pi^e - w(u-u_n) + \rho$</li>
+<li>$\pi = \pi^e - w(- \frac{1}{2}(Y - Y_P)) + \rho$
+<ul>
+<li>Why is this negative half?</li>
+</ul>
+</li>
+<li>$\pi = \pi^e - \gamma(Y - Y_P) + \rho$
+<ul>
+<li>where $\gamma$ is $0.5w$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="week10-content">Week10 Content</h1>
+<ul>
+<li>Use Aggregate Demand and Aggregate Supply Framework to do Policy Analysis</li>
+</ul>
+<h1 id="ad-shocks">AD Shocks</h1>
+<h2 id="negative-ad-shocks-no-policy-response">Negative AD Shocks (No Policy Response)</h2>
+<p>Negative AD Sock =&gt; AD Curve Shift Down =&gt; New short-run eq =&gt; $Y_2$ &lt; $Y_P$ and $\pi_2$ &lt; $\pi^t$<br>
+$y_2 &lt; y_p$ =&gt; slack labor market =&gt; $\downarrow$ w =&gt; $\downarrow \pi$ =&gt; SRAS shifts right =&gt; New Long-Run Eq. at 3. $Y = Y_P$ and $\pi = \pi_2$. Notice that $\pi_3 &lt; \pi_2 &lt; \pi^T$</p>
+<p><img src="image.png" alt="Negative AD Shocks (No Policy Response)"></p>
+<h2 id="negative-ad-shocks-policy-response">Negative AD Shocks (Policy Response)</h2>
+<p>At 2, =&gt; Monetary policy =&gt; Monetary Easing =&gt; Shifts the AD Curve back up.</p>
+<p><img src="image-1.png" alt="Negative AD Shocks (Policy Response)"></p>
+<h1 id="long-run-supply-shocks-no-policy-response">Long-run Supply Shocks (No Policy Response)</h1>
+<h2 id="negative-permanent-shock">Negative Permanent Shock</h2>
+<p><img src="image-2.png" alt="Negative Permanent Shock">
+At eq 1: decrease in predict output =&gt; increase in inflation rate =&gt; increase in expected inflation rate =&gt; decrease in SRAS<br>
+At eq2: $y_3 &gt; y_2^P$ =&gt; Positive output Gap =&gt; Tight Laour =&gt; increase in w  =&gt; Increase in p =&gt; increase in inflation rate =&gt; increase in expected inflation rate =&gt; SRAS shifts to the left (up) and become SRAS_3</p>
+<p><strong>Shocks to long-run aggregate supply generates short-run flunctuations</strong><br>
+<strong>Real Busines Cycle Theory: Shocks to individuals' performance and technology shifts LAS curve. This in turn generates short-run fluctuations</strong> =&gt; Neo-classical explanation of business cycles</p>
+<h1 id="long-run-supply-shocks-policy-response">Long-run Supply Shocks (Policy Response)</h1>
+<ul>
+<li>Monetary Policy shifts the AD curve</li>
+<li>Auto-correction shifts the SRAS curve</li>
+</ul>
+<p>In 2: $Y_2 &gt; Y^P_3$ =&gt; Monetary Tightening (Contractionary) via OMS</p>
+<p>Then, the inflationr rate at 2 will be higher than the final inflation rate.</p>
+<p><img src="image-3.png" alt="Negative Permanent Shock (With Policy Response)"></p>
+<h1 id="short-run-supply-shock">Short-run Supply Shock</h1>
+<h2 id="no-monetary-policy-response">No Monetary Policy Response</h2>
+<ul>
+<li>Cost of production increases, such as the indegredients become too expensive or the worker unions push the salary rate too high (or possibly with legislation)</li>
+</ul>
+<p>Recall that the SRAS equation is
+$$
+\pi = \pi^e - w(u-u_n) + \rho
+$$</p>
+<p>The shock is captured by $\rho$ in the SRAS equations. Now, if there is an increase in inported gods price =&gt; increase in $\rho$ =&gt; SRAS shifts to the right</p>
+<p>Therefore, at 2, the labor market is lsack =&gt; decrease in wage =&gt; decrease in in price level =&gt; decrease in inflation rate =&gt; decrease in expected inflation rate =&gt; SRAS will shift down</p>
+<p>Now, if you don't do anything it is will eventually shifts down because of the self-correction mechanism. Therefore, we will end up in the initial point.</p>
+<p>At eq2</p>
+<ul>
+<li>High Inflation Problem</li>
+<li>Low GDP (High Unemployment)</li>
+</ul>
+<h3 id="policy-analysis">Policy Analysis</h3>
+<p>Therefore, you need to make a choice to stablise the prices (inflation rate) or you can choose to stablise the output. You cannot do both at the same time!</p>
+<ul>
+<li>Stablise Prices (Decrease Inf)
+<ul>
+<li>Policy Intervention (Decrease Inflation)
+<ul>
+<li>Contractionary Policy =&gt; This will shifts the AD curve left. Hence the inflation rate will decrease</li>
+<li>However,  it is not possible to stay in such position =&gt; Temporary Solution. Eventually, automatic stablisation mechanism will shift SRAS to the right. To keep inflation rate at thetargeted level, you have to make sure AD moves as well.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Stablise Output (Increase GDP)
+<ul>
+<li>Expansionary Policy =&gt; This wil shifts the AD curve right. Henc, then inflation rate will increase but the output gap is fixed</li>
+<li>Monetary Policy Easing</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-4.png" alt="Negative Short-run Supply Shock (without monetary policy)"></p>
+<h1 id="short-run-fluctuations">Short Run Fluctuations</h1>
+<ul>
+<li>RBC (Neo-Classical)
+<ul>
+<li>Business cycles are due to change in $Y_P$ (permment supply shocks)</li>
+<li>No ROLE for Monetary Policy!</li>
+</ul>
+</li>
+<li>New Keynesian
+<ul>
+<li>Business cycles due to AD and short-run supply (price) shocks</li>
+<li>MP has a role!</li>
+</ul>
+</li>
+</ul>
+<p>Now, people found new tools to fix the issue as it was not easily fixed with the forementioned tools. Particularly, some of the interest rate is falling close to zero.</p>
+<h1 id="monetary-policy-at-zero-lower-bound-zlb">Monetary Policy at Zero Lower Bound (ZLB)</h1>
+<ul>
+<li>MP -&gt; $i$, short-term nominal interest interest rate using MP tools such as
+<ul>
+<li>OMO</li>
+<li>Discount Loans</li>
+</ul>
+</li>
+</ul>
+<p>Now, what if the $i \approx 0$ =&gt; ZLB</p>
+<p>When, $i \approx 0$, the traditional MPs will NOT work &lt;= policy rate (i) cannot be negative because of Arbitrary Conditions. However, note that real interest rate can be negative if interest rate is lower than the real interest rate (Notice $r = i - \pi$ by simplified fisher's equation).</p>
+<p>MP: $r = \bar{r} + \lambda \pi$ Taylor's principle</p>
+<p>Increase in $\bar{r}$ =&gt; MP tightening =&gt; increase in r =&gt; decrease I =&gt; decrease in aggregate demand</p>
+<p>Decrease in $\bar{r}$ =&gt; MP easing =&gt; decrease in r =&gt; increase in I =&gt; increase in aggregate demand of output</p>
+<p>Note that CBs decrease the real interest rate by lowering the policy rate ($i$)</p>
+<ul>
+<li>Suppose CB follos aylor Principle</li>
+</ul>
+<h1 id="monetary-policy-curve-with-a-zero-bound">Monetary Policy Curve with a Zero Bound</h1>
+<p><img src="image-5.png" alt="Monetary Policy Curve wtth A Zero Bound"></p>
+<h1 id="self-correting-mechanism-at-zlb">Self-correting Mechanism at ZLB</h1>
+<p>Because of slack labor market, the SRAS shifts down as the inflation expectation decrease. However, this does not but simply shifts the curve further to the left and keep decreasing the actual output</p>
+<p><img src="image-6.png" alt="alt text"></p>
+<p>As the self-correction is not working at ZLB =&gt; You need to do something as a CB. Hence, monetary policy is required. Yet, traditional policies will not work as the nominal interest rate is already at 0. Hence, new policies are developed</p>
+<ul>
+<li>Liquidity Provision
+<ul>
+<li>$r_c = r + \bar{f}$
+<ul>
+<li>when it is at bad time, financial friction will kick in and the real cost of borrowing will increase</li>
+<li>Note that we cannot play with $r$ as we cannot change $i$ anymore.</li>
+<li>However, we can change the $\bar{f}$, i.e. makes the process of lending and borrowing easier.</li>
+<li>Then, decrease in $\bar{f}$ will lead to decrease in $r_c$.</li>
+</ul>
+</li>
+<li>Qunatitative Easing</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

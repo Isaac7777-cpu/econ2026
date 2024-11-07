@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week7.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="the-foreign-exchange-market">The Foreign Exchange Market</h1>
+<h2 id="exchange-rates-and-trade">Exchange Rates and Trade</h2>
+<ul>
+<li><strong>A nominal rate</strong> is the price of one currency in terms of another currency</li>
+<li>Changes in the exchange rate between the dollar and foreign currencies affect the prices that Australian consumers pay for foreign imports.</li>
+<li><strong>Appreciation</strong> is an increase in the value of a currency in exchange for another currency.</li>
+<li><strong>Depreciation</strong> is a decrease in the value of a currency in exchange for another currency.</li>
+</ul>
+<h3 id="direct-quotations">Direct Quotations</h3>
+<p><strong>Direct quotations</strong> are exchange rates quoted as units of domestic currency per unit of foreign currency. 1.29 AUD (domestic currency) for 1 USD (foreign currency) as of 18/04/2021.</p>
+<h3 id="indirect-quotations">Indirect Quotations</h3>
+<p><strong>Indirect quotations</strong> are exchange rates as units of foreign currency per unit of domestic currency. 0.77 USD (foreign currency)  for 1 AUD (domestic currency) as of 18/04/2021</p>
+<p><ins><em>Exchange rates are volatile!!</em></ins></p>
+<h3 id="real-exchange-rate">Real Exchange Rate</h3>
+<p>The <strong>real exchange rate</strong> is the rate at which goods and services in one country can be exchanged for goods and services in another country.
+$$
+\text{readl exchange rate} = \frac{\text{exchange rate} \times \text{price of good in domestic}}{\text{price of same good in foreign}}
+$$</p>
+<p>For example, we can do this with the Big Mac price</p>
+<p><img src="big_mac_comparison_example.png" alt="big mac coparison"></p>
+<p><strong>Note that the story can be completely different when comparing big mac versus comparin CPI</strong></p>
+<h2 id="exchange-rates-in-the-long-run">Exchange Rates in the Long Run</h2>
+<ul>
+<li><strong>The law of one price</strong> is the idea that identical products should sell for the same price everywhere.</li>
+<li>The law of one price is the basis for <strong>the theory of purchasing power parity (PPP)</strong>.</li>
+<li><strong>Theory of purchasing power parity (PPP)</strong> states that exchange rates move to equalize the purchasing power of different currencies.</li>
+<li>In the long run, an exchange rate should be at a level that the equivalent amount of any country’s currency can buy the same amount of goods and services.</li>
+</ul>
+<h3 id="example-of-the-theory-of-purchasing-power-parity-ppp">Example of the Theory of Purchasing Power Parity (PPP)</h3>
+<ul>
+<li>Purchasing Power Parity Theorems $\implies$ The different in price determines the nominal exchange rate between two currencies.</li>
+<li>Arbitrage profits will exist if the nominal rate is different from the actual price-level difference
+<ul>
+<li>$\implies$ Maney exchange for the two currencies</li>
+<li>$\uparrow$ Demand for one current $\implies$ the current will appreciate (and the other depreciate)</li>
+<li>Then, the gap between the price level is fixed by changing the nominal rate</li>
+<li><em>All arbitrage profits gaps are used.</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="ppps-prediction">PPP's Prediction</h3>
+<p>If $\pi^D &gt; \pi^F ; (\pi \text{ is inflation rate})$, the domestic currency depreciates!
+$$e = \frac{E \times P^D}{P^F}$$
+$$% \Delta e = % \Delta E + (\pi^D - \pi^F)$$
+Note that $% \Delta e$ is the percentage change in the real exchange rate.</p>
+<p>However, note that if PPP holds, $e = 1 \implies \Delta e = 0$<br>
+Hence $0 = \Delta E + (\pi^F - \pi^D) \implies \Delta E = \pi^F - \pi^D$<br>
+Hence the difference in the inflation rates explain nominal exchage rate difference in the long-term.</p>
+<h3 id="limitations-to-the-ppp">Limitations to the PPP</h3>
+<ul>
+<li>Real-world complications keep PPP from being a complete explanation of exchange rates:
+<ul>
+<li>Not all products can be traded internationally</li>
+<li>Products are differentiated</li>
+<li>Governments impose barriers to trade, e.g., tariffs and quotas
+<ul>
+<li>A tariff is a tax a government imposes on imports.</li>
+<li>A quota is a limit a government imposes on the quantity of a good that can be imported.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="should-big-macs-have-the-same-price-everywhere">Should Big Macs Have the Same Price Everywhere?</h3>
+<p><img src="big_mac_prices.png" alt="Big Mac price"></p>
+<h2 id="a-demand-and-supply-model-of-short-run">A Demand and Supply Model of Short-Run</h2>
+<ul>
+<li>The model determines both the equilibrium nominal exchange rate and the equilibrium real exchange rate, holding price levels constant.</li>
+<li>The demand for Australian dollars represents the demand by foreign households and firms for Australian goods and Australian financial assets.</li>
+<li>The supply of dollars in exchange for a foreign currency is determined by the willingness of households and firms that own dollars to exchange them for the foreign currency.</li>
+</ul>
+<h3 id="explaination">Explaination</h3>
+<p>Two countries</p>
+<ul>
+<li>Domenstic -&gt; interest rate $i^D$</li>
+<li>Foreign -&gt; intereate rate $i^F$</li>
+</ul>
+<p>$$
+E_t \text{ : current exchange rate} \
+E^e_{t+1} \text{ : future expected exchange rate}
+$$</p>
+<p>$$\text{Expected rate of app/dep} = \frac{E^e_{t+1} - E_t}{E_t}$$</p>
+<p>Now, if this expected rate is positive, we will expect an appreciation, while if it is negative, we expect a depreciation in the domestic currency.</p>
+<p>Then, we can calculate returns in terms of foreign currency.</p>
+<ul>
+<li>
+<p>Expected returns on domestic assets in terms of foreign currency.</p>
+<ul>
+<li>$\displaystyle R^D = i^D + \frac{E^e_{t+1} - E_t}{E_t}$</li>
+<li>Note that the second term is gain/loss made by foreigners from converting foreign currency into domestic currency</li>
+<li>$R^D &gt; R^F \implies \uparrow \text{Demand for domestic assets}$</li>
+<li>Hence, in the equilibriun $R^D = R^F$</li>
+<li>This would imply that in the equilibrium</li>
+<li>$\displaystyle i^D + \frac{E^e_{t+1} - E_t}{E_t} = i^F$</li>
+</ul>
+</li>
+<li>
+<p>Expected returns on foreign assets in terms of foreign currency.</p>
+<ul>
+<li>Well, the second case is fairly trivial, it is simply just $R^F = i^F$</li>
+</ul>
+</li>
+</ul>
+<p>Hence, we get the following with simple arithematic:
+$$E_t = \frac{E^e_{t+1}}{i^F - i^D + 1}$$
+Note that the above equation is called the interest rates parity condition. And, we get the following statements:</p>
+<ul>
+<li>$\uparrow E^e_{t+1} \implies \uparrow E_t$</li>
+<li>$\uparrow i^F \implies \downarrow E_t$</li>
+<li>$\uparrow i^D \implies \uparrow E_t$</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>We have two theorem to explain the exchange rate:</p>
+<ul>
+<li>Long-term
+<ul>
+<li>PPP: $% \Delta E = \pi^F - \pi^D$</li>
+</ul>
+</li>
+<li>Short-term
+<ul>
+<li>Interest Parity Conditions</li>
+</ul>
+</li>
+</ul>
+<h3 id="some-examples">Some examples</h3>
+<p><img src="raise_in_expected_future.png" alt="raise in expected future exchange rate"></p>
+<p><img src="raise_n_domestic_interest_rate.png" alt="raise in domestic interest rate"></p>
+<p><img src="raise_in_foreign_rate.png" alt="increase in foreig interest rate"></p>
+<h2 id="demand-and-supply-model">Demand and Supply Model</h2>
+<h3 id="exchange-rate-intervention">Exchange rate Intervention</h3>
+<ul>
+<li>Unsterlised Intervetions
+<ul>
+<li>B (monetary base) is allowed to fluctuate</li>
+</ul>
+</li>
+<li>Sterlilised interventions
+<ul>
+<li>B will not change</li>
+</ul>
+</li>
+</ul>
+<h4 id="unsterilised-interventions">Unsterilised Interventions</h4>
+<ul>
+<li>Ex: CB buys foreign asets (sell domestic currency) with a check of $1 Billion</li>
+<li>$B = R + C$</li>
+<li>Buying foreign assets =&gt; increase R =&gt; increase B =&gt; increase M since $M = m \cdot B$</li>
+<li>increase in M =&gt; increase expected inflation rate =&gt; decrease in expected real return on domestic assets ($i^D - \pi^e$)</li>
+<li>Then, this will cause the exchange rate to decrease and depreciate the domestic currency</li>
+</ul>
+<h4 id="sterilised-foreign-exchange-rate-intervention">Sterilised Foreign Exchange Rate Intervention</h4>
+<ul>
+<li>Ex: Selling $1 billion of foreign assets (this is equivalently saying they buy domestic currency)</li>
+<li>This will results in decrease in monetary base($B$) (contractionary monetary policy (緊縮政策))</li>
+<li>CB wants to keep $B$ constant =&gt; Therefore, CB will [buy domestic treasury bond] conduct Open Market Purchase of $1 billion of domestic treasury bond</li>
+<li>This would increase in $B$, so we will have $\Delta B = 0$</li>
+<li>Since, monetary base does not change =&gt; monetary supply does not change ($\Delta M = 0$) =&gt; Expected inflation rate does not change =&gt; expected real returns on domestic assets ($i^D - \pi^e$) will not change =&gt; Demand will not change =&gt; Exchage rate wil not change.</li>
+</ul>
+<h1 id="exchange-rate-regimes-and-the-international-financial-system">Exchange Rate Regimes and the International Financial System</h1>
+<h2 id="exchange-rate-regimes">Exchange Rate Regimes</h2>
+<ul>
+<li><strong>Exchange-rate regime</strong> is a system for adjusting exchange rates and flos of goods and capital among countries</li>
+<li>Fixed exchange rate regime
+<ul>
+<li>Value of a currency is pegged relative to the value of one other currency (anchor currency)</li>
+<li>Note that this will take away the freedom to use monetary policy</li>
+</ul>
+</li>
+<li>Floating exchange rate regime
+<ul>
+<li>Value of a curency is allowed to fluctuate against all other currencies</li>
+</ul>
+</li>
+<li>Managed float regime (dirty float) =&gt; This is the middle one between the the two above.
+<ul>
+<li>Attempt to influence exchange rates by buying and selling currencies</li>
+<li>This is what the Chinese government use.</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed-exchange-rate-regime">Fixed Exchange Rate Regime</h3>
+<ul>
+<li>When the domestic currency is overvalued (the target exchange rate is higher than actual), the central bank must
+<ul>
+<li>purchase domestic currency to keep the exchange rate fixed (it loses international reserves),</li>
+<li>or conduct a devaluation =&gt; Change the $E_{par}$ to $E_1$</li>
+</ul>
+</li>
+</ul>
+<p>Note that for the first option, we will have a contractionary monetary policy (buying domestic currency). This implies decrease in reserve and hence the monetary base. Therefore, the money supply $M$ will decrease as well. This would imply that the expected inflation rate decrease. Hence, higher expected real return on domestic assets. Therefore, the demand increases and increases the nominal exchange rate.</p>
+<ul>
+<li>When the domestic currency is undervalued (the target exchange rate is lower than actual), the central bank must
+<ul>
+<li>buy foreign assets/sell domestic currency to keep the exchange rate fixed (it gains international reserves),</li>
+<li>or conduct a revaluation</li>
+</ul>
+</li>
+</ul>
+<p>Buy foreign assets =&gt; Increase in reserve and monetary base. =&gt; Increase in money supply =&gt; Increase in expected inflation rate =&gt; Decrease expected real return on domestic assets ($i^D - \bar{\pi}^e$) =&gt; Decrease the demand =&gt; Decrease the exchange rate.</p>
+<p>Questions:
+Why less monetary supply implies inflation rates to decrease?<br>
+Why expected real return rate is equal to $i^D - \pi^e$</p>
+
+</body>
+</html>

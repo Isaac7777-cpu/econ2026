@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>week9.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="aggregate-demand-recap-from-last-week">Aggregate Demand (Recap from Last Week)</h1>
+<ul>
+<li>AD: Y (GDP) and $\pi$</li>
+<li>AS: Y (GDP) and $\pi$
+<ul>
+<li>where $\pi$ is inflation rate</li>
+</ul>
+</li>
+</ul>
+<p>$$
+Y^{ad} = C + I + G + \text{NX}
+$$</p>
+<p>$$
+\pi \uparrow \rightarrow r \uparrow \rightarrow I \downarrow \rightarrow Y^{ad} \downarrow
+$$</p>
+<h2 id="np-curve">NP Curve</h2>
+<p>Shows the relationship between the inflation rate and the real interest rate</p>
+<h2 id="is-curve">IS Curve</h2>
+<p>Shows the relationship between real interest rate and GDP</p>
+<h2 id="ad-curve">AD Curve</h2>
+<p>Combines the two above, and it shows a negative relationship between inflation rate $\pi$ and GDP $y$.</p>
+<h2 id="the-main-mechanism-for-having-negative-relationship-in-the-ad-curve">The Main Mechanism for Having Negative Relationship in the AD Curve</h2>
+<ul>
+<li>First Link (From Investment Demand): When there is an increase in inflation rate, then the real interest rate increases because the monetary policy curve and CBs follow Tayler's rule. This implies lower investment demand ($I_d$). This causes lower aggregate demand as shown in the AD equation above.</li>
+<li>Second Link (From Import/Export Aspect): When there is an increase inflation rate, this implies an increase in real interest rate. However, this would implies appreciate in domestic assets and hence domestic currency. Therefore, there is an increase in exchange rate and hence decrease export demand and also net export. This would reduce the aggregate demand as well.</li>
+</ul>
+<h3 id="aggregate-demand-equation">Aggregate Demand Equation</h3>
+<p>$$ Y = \frac{\bar{A}}{1 - c} - \frac{d + x}{1 - c}(\bar{r} + \lambda\pi) $$
+where,
+$$ \bar{A} = \bar{C} - c\bar{T} + \bar{I} - d\bar{f} + \bar{G} + \bar{NX}$$</p>
+<p>Therefore changes in $\bar{A}$ will shift the demand curve. The first term is affected by the IS curve. The first one is affected by Fiscals policy. <ins>(Fiscal policy refers to the government’s use of spending and taxation to influence the economy.)</ins>
+The second term is affected by the change in Monetary Policy.</p>
+<p>Factors that shift AD to the right:</p>
+<ul>
+<li>$\downarrow \bar{r}$ (monetary policy easing), changes in components of autonomous term correspondingly.</li>
+</ul>
+<h1 id="aggregate-supply-as">Aggregate Supply (AS)</h1>
+<ul>
+<li>Prices and wages are sticky.
+<ul>
+<li>They are changing in a lower pace. (Keynesian Assumption)</li>
+</ul>
+</li>
+</ul>
+<h2 id="long-run-aggregate-supply-lras">Long-run Aggregate Supply (LRAS)</h2>
+<ul>
+<li>Long-run Aggregate Supply (LRAS) reflects the economy strength (?)
+$$
+Y = F(K, L, A)
+$$
+,where<br>
+$F$ is the production function. (We don't need to know the technical detail of this function. The course will simply provide it.)<br>
+$K$ is capital stock<br>
+$L$ is labour supply
+$A$ is total factor of productivity (TFP) --- technology.</li>
+</ul>
+<p>At the long run: Labour (L) is at full employment</p>
+<ul>
+<li>Full employment $\implies$ $\text{unemployment rate} = \text{natural rate of unemployment}$
+<ul>
+<li>Note that the natural rate is approximately 4% -- 5% for many economies.</li>
+<li>Note that natural rate of unemployment is unavoidable.</li>
+<li>It has two components:
+<ul>
+<li>Frictional Unemployment
+<ul>
+<li>People in going for searching</li>
+</ul>
+</li>
+<li>Structural Unemployment
+<ul>
+<li>Due to structural changes $\implies$ For example, AI consumes some jobs but create some new job opportunities</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The unemployment that is not wanted in economic perspective:
+<ul>
+<li>Cyclical unemployment:
+<ul>
+<li>Happens due to business cycles
+<ul>
+<li>For example, a skii coach is typically unemployed over the summer.</li>
+<li>Can avoid with Fiscal Policies and Monetary Policies.</li>
+</ul>
+</li>
+<li>In the long-run, $\text{cyclical unemployment} = 0$</li>
+<li>$\star$ <strong>In the short-run, it might be larger than zero. MP (and/or Fiscal Policy) will help to get rid of it!</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="image.png" alt="Long and Short Run Aggregate Supply Curves">
+Note that the Potential DP where unemployment rate = natural unemployment rate (full employment) is where the $LRAS$ curve is.</p>
+<h2 id="short-run-aggregate-supply-sras">Short-run Aggregate Supply (SRAS)</h2>
+<p>Based on the idea that 3 factors that generate $\pi$ <ins>in any economy</ins></p>
+<ul>
+<li>Future Inflation Expectation (<strong>THE MOST IMPORTANT ONE</strong>) $\pi^e$</li>
+<li>Persistent Output Gap
+<ul>
+<li>Constantly generating more things than needed</li>
+<li>Explained later</li>
+</ul>
+</li>
+<li>Price (Supply) Shock
+<ul>
+<li>Explained later</li>
+</ul>
+</li>
+</ul>
+<h3 id="inflation-expectation-pie">Inflation Expectation $\pi^e$</h3>
+<ul>
+<li>$w_n$ nominal wages</li>
+<li>$w_r$ real wages (in terms of goods and accessories)
+<ul>
+<li>We feel focus on the real wages</li>
+<li>Matters for worker and firms!</li>
+</ul>
+</li>
+</ul>
+<p>$\uparrow P$ (Price Level) $\implies$ Workers Expect Adjustment to Nominal Wages ($\uparrow w_n$) $\implies$ Increase in Inflation Expectation (one for one increase) $\uparrow \pi^e$</p>
+<p>Now, since $w_n = w_r + \pi^e$, then assuming the real wage is a constant. Remember meet important production cost: WAGES!</p>
+<p>$$\uparrow \pi^e \implies \uparrow \pi $$
+This is another channel that is going to chage as well.</p>
+<h3 id="output-gap">Output Gap</h3>
+<p>The difference between the level of GDP (we observed) and the potential GDP
+$$
+\text{Output Gap} = Y - Y^P
+$$
+,where</p>
+<ul>
+<li>$Y^P$ is the predicted GDP</li>
+<li>$Y$ is the current GDP</li>
+</ul>
+<p>Three Situations</p>
+<ul>
+<li>Positive Ouput Gap $\impliedby Y &gt; Y^P$
+<ul>
+<li>Problematic because we will have very tight labour market (More jobs, less works) Market is tight in firm's perspective.</li>
+<li>Workers will demand higher wages since the market is tight. Hence, the prices will increase since wages is the primary source of cost.</li>
+<li>Firms: $\uparrow P \implies \uparrow \pi$</li>
+</ul>
+</li>
+<li>Negative Ouput Gap $\impliedby Y &lt; Y^P$
+<ul>
+<li>Slack Labour Market (More workers, less jobs) $\implies$ Demand lower wages $\implies$ Decrease the cost of productions and price levels.</li>
+</ul>
+</li>
+</ul>
+<h3 id="price-supply-shock">Price (Supply) Shock</h3>
+<p>Facing shocks outside of the economic system. Boeing shock may affect any upstream or downstream producers.</p>
+<h4 id="example-1">Example 1</h4>
+<p>Restriction of supply of oil $\implies$ increase the price of oils $\implies$ increase price of other goods and services (not oil producing countries) $\implies$ $\uparrow \pi$ Increases in Inflation. Hence
+$$
+\uparrow P_{\text{Imported Goods tah used as Input}} \implies \uparrow P_{\text{Goods &amp; Services}} \implies \uparrow \pi
+$$</p>
+<h4 id="example-2">Example 2</h4>
+<p>Strong Labour Unions $\implies$ Implies increase in wages by too much $\implies$ Significant increase in price levels $\implies$ Increase in inflation.</p>
+<h3 id="sras-equation">SRAS Equation</h3>
+<p>$$
+\pi = \pi^e + \gamma(Y - Y^P) + \mathcal{p}
+$$</p>
+<ul>
+<li>$\pi^e$ expected inflation</li>
+<li>$\gamma$ The sensitive ness of output gap</li>
+<li>$Y - Y^P$ The output gap</li>
+<li>$p$ the price shocks</li>
+</ul>
+<h2 id="going-back-to-the-graph">Going Back to the Graph</h2>
+<p><img src="image.png" alt="Long and Short Run Aggregate Supply Curves"></p>
+<ul>
+<li>Shifts in LRAS $\impliedby$ An increase in the parameters will increase in the LRAS (right shifting it).</li>
+<li>Shifts in SRAS $\impliedby$
+<ul>
+<li>Inflation Expectation $\pi^e$</li>
+<li>Persistent output gap</li>
+<li>Price (supply) shock</li>
+<li>Increase in any of these factors will shift the curve up.</li>
+<li>Explanation
+<ul>
+<li>increase in inflation expectation $\implies$ increase in nominal wages $\implies$ increase in price level $\implies$ increase in inflation rate $\implies$ SRAS shifts up (left)</li>
+<li>$p$: increase in price level $\implies$ increase in inflation rate $\implies$ SRAS shifts up</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="explaination-of-the-affect-of-persistent-output-gap">Explaination of the affect of persistent output gap</h4>
+<ul>
+<li>Cannot stay in the left of $Y^P$ as we are producing much less than I can $\implies$ Idle workers and factories
+<ul>
+<li>Then, move along the SRAS curve to $Y^P$</li>
+</ul>
+</li>
+<li>Cannot stay in the right of $Y^P$ as well as we are strectching the resources $\implies$ Overworking...
+<ul>
+<li>Also, move along the curve to $Y^P$</li>
+</ul>
+</li>
+</ul>
+<p>Therefore, increase or decrease in the output gap $\implies$ increase or decrase inflation rate. This mainly ties with having tight or slack labour market. Hence, this will adjust the inflation expectation and SARS will shift according to how inflation expectation would change.</p>
+<ul>
+<li>Note that if no regulation comes into this part, it will form a positive loop for increasing the inflation rate. (This loop will continue on until the output gap is fixed.)</li>
+</ul>
+<h2 id="equilibrium">Equilibrium</h2>
+<p>Long-term equilibrium is achieved when the AD, SRAS, and LRAS intersects together.</p>
+<p>Note that if the predicted output and current output does not match, short-term equilibrium must moves.</p>
+<h3 id="policy">Policy ...</h3>
+<p>If short-run equilibrium is larger then potential production, then we have a positive ouput gap. Note that this would lead to a tight labour market, and hence an increase in price level as the demanded wages and the cost of production would increase. Therefore, the inflation would increase and the <strong>inflation expectation</strong> would also increase. Then, the increase in inflation expectation implies the SRAS will shift up.</p>
+<p>Now, note that the short-term equilibrium (intersection between SRAS and AD) will shifts left, towards the predicted output even though it might not be exactly on the long-run equilibrium point. Therefore, eventually, the inflation point will eventually equal to the long-run equalibrium (intersection between LRAS and AD).</p>
+<p>This process is called a self-correction mechanism and will forced the changes. Therefore, it is impossible to stay away from the long-run equilibrium for a long time. However, we don't know how long it will take to achieve the equilibrium. Therefore, CB will prefer intervention in order to speed up the process.</p>
+<h2 id="ad-shocks">AD Shocks</h2>
+<p>Positive AD Shock =&gt; AD shift right
+This would then by putting the the AD curve goes up and shifts the short-term equilibirum right and the auto-correction mechanism will be shifting the long-term equilibrium interest rate up. However, this does not happen right away. However, this still requires a latency for the self-correction mechanism to perform the action.</p>
+<h2 id="the-volcker-deinflation">The Volcker Deinflation</h2>
+<p>Similar to above, we can shift the AD to the left (negative AD shock). This would cause the short-term equilibrium be on the left of the long-run equilibrium. This would then eventually be shifting the inflation rate down by the self-correcting mechanism.</p>
+<p>Want to decrease inflation. =&gt; OPS (contractionary) =&gt; higher interest rate =&gt; increase in real interest rate =&gt; decrease in inflation rate.</p>
+<p>Now, the AD curve moves down, then the GDP is far left to the $Y^P$. Then, there was a slack labour market =&gt; decrease in nominal wage =&gt; decrease in price level =&gt; decrease in inflation rate =&gt; decrease inflation expectation =&gt; shifting the SRAS down.</p>
+<p>Note that this does not quantify how much it should go, but simply a graph drawing exercise.</p>
+<h2 id="philips-curve">Philips Curve</h2>
+<p>The relationship between inflation rate and unemployment rate ($u$). Note that the equation is highly similar to aggregate supply but just linking to different things.
+$$
+\pi = \pi^e - w(u-u_n) + \rho
+$$</p>
+<ul>
+<li>$w$ is the weights of the unemployment gap</li>
+<li>$\rho$ is the price shocks</li>
+</ul>
+<p>Hence, increase in inflation expectaion increases the inflation rate.</p>
+<p>Note that Okun's Law:
+$$
+u - u_n = \frac{1}{2}(y - y_P)
+$$</p>
+<p>Hence, the SRAS can be expressed similarly with the gap in unemployment rate.</p>
+
+</body>
+</html>

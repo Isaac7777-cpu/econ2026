@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>week11.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="inflation">Inflation</h1>
+<h2 id="cost-push-inflation">Cost-Push Inflation</h2>
+<p><img src="cost-push_inflation.png" alt="Cost-Push Inflation"></p>
+<h2 id="demand-pull-inflation">Demand-Pull Inflation</h2>
+<p><img src="demand-pull_inflation.png" alt="Demand-Pull Inflation"></p>
+<h1 id="monetary-policy-at-zlb">Monetary Policy at ZLB</h1>
+<h2 id="liquidity-provision">Liquidity Provision</h2>
+<ul>
+<li>A central bank can bring down financial frictions directly by increasing its lending facilities in order to provide more liquidity to impaired markets so that they can return to their normal functions.</li>
+<li>This decline in financial frictions lowers the real interest rate for investments.</li>
+</ul>
+<p>Recall that $r_c = r + \bar{f}$</p>
+<p>Then, we can affect the the financial friction $f$ to make the real cost of borrowing lower. Note that, although we cannot change the real interest rate because we cannot change the short-term nominal interest rate anymore. However, we can change the financial friction to affect the real cost of borrowing.</p>
+<p><img src="liquidity_provision.png" alt="Liquidity Provision"></p>
+<h2 id="quantitative-easing">Quantitative Easing</h2>
+<p>Note that many times, when firm making decision, those are long-term decisions. Therefore, the most important one is long-term real interest rate.</p>
+<p>$$
+r_{\text{long-term}} = r_{\text{short-term}} + \text{premium}
+$$</p>
+<p>Note that we can no longer affect the short-term real interest rate. However, we can change the premium. Now, quantitative easing, we will <ins>buy private assets as a CB</ins>. Therefore, this will cause the decrease in premium and hence the decrease in real long term interest rate. Therefore, this would increase the aggregate demand.</p>
+<ul>
+<li>note that buying quantitative easing is similar to open market purchase. This allows to decrease the premium</li>
+</ul>
+<p><img src="quatitative_easing.png" alt="QE"></p>
+<h2 id="forward-guidance-mangement-of-expectations">Forward Guidance (Mangement of Expectations)</h2>
+<ul>
+<li>This is by affecting the individual expectations of inflation rate.</li>
+<li>Forward Guidance shifts SRAS</li>
+</ul>
+<p><img src="forward_guidance.png" alt="forward guidance"></p>
+<h1 id="the-role-of-expectations-in-monetary">The Role of Expectations in Monetary</h1>
+<ul>
+<li>Recall the expectation of the inflation rate can change the SRAS</li>
+</ul>
+<h2 id="lucas-critique-of-policy-evaluation">Lucas Critique of Policy Evaluation</h2>
+<ul>
+<li>Macro-economtric models - collections of equations that decribe statistical relationships among economic variables -
+<ul>
+<li>Are used by economists to forecast economic activity and to evaluate the potential effects of policy options</li>
+</ul>
+</li>
+<li>In his famous paper &quot;Econometric Policy Evaluation: A Critique,&quot; Robert Lucas argued that
+<ul>
+<li>econometric models are unreliable for evaluation policy options if they do not incorporate rational expectations</li>
+</ul>
+</li>
+<li>According to Lucas, when policies change,
+<ul>
+<li>public expectations will shift as well,</li>
+<li>and such changing expectations can have a real effect on economic behavior and outcomes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="policy-conduct-rules-or-discretion">Policy Conduct: Rules or Discretion?</h2>
+<ul>
+<li>Policy Rules
+<ul>
+<li>are binding plans that specify how policy will respond (or not respond) to particular data such as unemployment and inflation</li>
+</ul>
+</li>
+<li>Policy discretion
+<ul>
+<li>is applied when policy makers make no commitment to future actions, but instead make what they believe in that moment to be the right decision for the situation</li>
+</ul>
+</li>
+</ul>
+<h3 id="rule-based">Rule-Based</h3>
+<ul>
+<li>Rigid (Not good)</li>
+<li>Prevents time-inconsistency problem (Good)</li>
+<li>Time-inconsistency: When long-term plans are ignored when time comes</li>
+</ul>
+<h3 id="discretionary-mp">Discretionary MP</h3>
+<ul>
+<li>Flexible $\implies$ Easier to fix a problem, particularly sudden ones</li>
+<li>Time-inconsistency problem</li>
+</ul>
+<h3 id="constrained-mp">Constrained M.P</h3>
+<ul>
+<li>Flexible</li>
+<li>No Time-Inconsistency Problem (Most of the time, minimises)</li>
+<li>Many CBs follow this!</li>
+<li>Setting up a NOMINAL ANCHOR!
+<ul>
+<li>target custom inflation level (Inflation Targeting)</li>
+<li>Having nominal anchor $\implies$ Increase in credibility</li>
+<li>Australia: 2 - 3%</li>
+</ul>
+</li>
+</ul>
+<h2 id="type-of-rules">Type of Rules</h2>
+<ul>
+<li>Non-activist rules: do not react to economic activity
+<ul>
+<li>Milton Friedman's constant-money-growth-rate rule</li>
+</ul>
+</li>
+<li>Activists: monetary policy reacts to changes in economic activity</li>
+</ul>
+<h2 id="credibility-and-ad-shocks">Credibility and AD Shocks</h2>
+<p>$$
+\pi = \pi^e + \gamma(Y - Y^P) + \mathcal{p}
+$$</p>
+<p>If a CB is credible, then we can believe their targets.</p>
+<h3 id="credible-cb">Credible CB</h3>
+<ul>
+<li>Since the CB is credible, we will believe that their monetary policy will work and does not change the expectation.</li>
+<li>Therefore, it will eventually go back to the original inflation rate.</li>
+</ul>
+<h3 id="non-credible-cb">Non-credible CB</h3>
+<ul>
+<li>Since CB is not credible, when we see the output level is higher than the potential output level, we will adjust expectation of inflation rate.</li>
+<li>The public does not blieve CB is credible enought to keep inflation rate and the target inflation rate)</li>
+</ul>
+<h2 id="negative-short-run-supply-shock">Negative short-run Supply Shock</h2>
+<ul>
+<li>$\rho$ is the inital price (supply) shock</li>
+<li>Negative supply shock: $\rho$ is increased from $\rho_0$ to $\rho_1$</li>
+</ul>
+<h3 id="credible-cb-vs-non-credible-cb">Credible CB vs Non-credible CB</h3>
+<ul>
+<li>The increase in the inflation rate won't change a lot because the inflation expectation is not adjusted.</li>
+<li>Non-credible is vice-versa</li>
+</ul>
+<h2 id="anti-inflation-polcy">Anti-inflation polcy</h2>
+<ul>
+<li>If the CB is credible, we believe the CB and drop my own inflation expectation to the CB's level.</li>
+<li>On the other hand, if we don't believe in the CB, we choose to not adjust our inflation expectation as much.</li>
+</ul>
+<h2 id="how-to-have-a-credible-cb">How to have a credible CB?</h2>
+<ul>
+<li>
+<p>Inflation Targeting</p>
+<ul>
+<li>Strategy that involves:
+<ul>
+<li>public announcement of medium-term numerical targets for inflation</li>
+<li>an institutional commitment to price stability as the primary, long-run goal of monetary policy</li>
+<li>an information-inclusive approach in which policymakers use many variables in making decisions about monetary policy</li>
+<li>increased transparency of the monetary policy strategy through communication with the public and the markets</li>
+<li>increased accountability of the central bank for attaining its inflation objectives</li>
+</ul>
+</li>
+<li>Adopted by many countries, beginning with New Zealand, Australia, Canada and the United Kingdom</li>
+</ul>
+</li>
+<li>
+<p>Appoint “conservative” central bankers</p>
+<ul>
+<li>The public will then expected that the “conservative” central banker will be less tempted to pursue expansionary monetary policy and will try to keep inflation under control</li>
+</ul>
+</li>
+</ul>
+<h1 id="transmission-mechanism">Transmission Mechanism</h1>
+<p>We are changing the short-term nominal interest rate to change many other things, consumption demand, export...</p>
+<p>Therefore, we will now look at how the change in the interest rate can affect these things. There are many channels.</p>
+<ul>
+<li>Note that: Australia has variable mortgage rate! This allows the change in interest rate will change the mortgage rate and have a chanel to change the consumer behaviours.</li>
+</ul>
+<p>Three mechanism:</p>
+<ul>
+<li>Traditional Interest Rate Channel</li>
+<li>Other Assets</li>
+<li>Credit View</li>
+</ul>
+<h2 id="traditinoal-interest-rate-channle">Traditinoal Interest Rate Channle</h2>
+<ul>
+<li>Works through the investment demand</li>
+<li>For example, they may affect the policy rate (short-term interest rate). Note that they cannot even decide it, but just affect it.</li>
+<li>Fisher's Equation:
+<ul>
+<li>$r_{\text{short-term}} = i_{\text{short-term}} - \pi$</li>
+</ul>
+</li>
+<li>Since prices are sticky, changes in short term policy rate can affect the real interest rate.</li>
+</ul>
+<h2 id="other-assets">Other Assets</h2>
+<ul>
+<li>Foreight Exchange Rate
+<ul>
+<li>Decrease in short-term interest rate $\implies$ Decrease in long term real interest rate. Therefore, demand for domestic assets decreaes, and hence lower the demand for domestic currency. Therefore, this will decrease the exchange rate. Therefore, lowering the import and increasing the export. Therefore, net export will increases and hence increase in aggregate demand.</li>
+</ul>
+</li>
+<li>Price of Equities
+<ul>
+<li>Decrease in the short-term nominal interest rate. THerefore, decrease in short-term and long-term real rate. If this interest rate is lower, then investors will go to the stock market (equity market) since bond market is nto good. This would increase the stock prices ($P_s$). Hence the market value of the firm will increase. Now, Tohn's Q Theory $Q =\frac{\text{Market Value of FIrm}}{\text{Cost of Capital}}$. Therefore, Q will increase. Therefore, new captial will be relatively cheap (new capital can be generated quite easily). This will lead the firm to issue more stocks and hence increase in investment.</li>
+</ul>
+</li>
+<li>Wealth Effect (Consumer's Slide)
+<ul>
+<li>Cosumption decisions depends on life-time resources: Resources smoothing.</li>
+</ul>
+</li>
+<li>Increase in stock price $\implies$ Increase in value of infnacial wealth $\implies$ Increase of life-time reousrces $\implies$ Increase in comsumption demand $\implies$ Shift the demand curve.</li>
+</ul>
+<h2 id="credit-view">Credit View</h2>
+<ul>
+<li>It is more important as we can access to the foreign market quite easily, this is more important.</li>
+<li>Banks Lending Channel</li>
+<li>Balance Sheet Channel</li>
+<li>Note that this is far from complete and still a very hot research area</li>
+</ul>
+<h3 id="bank-lending-channel">Bank Lending Channel</h3>
+<ul>
+<li>Expansionary MP $\implies$ Decrease in interest rate $\implies$ Bank reserves (because of expansionary moentary policy). Therefore, bank will increase on bank loans. Therefore, increase in investment and hence increase in aggregate demand.</li>
+</ul>
+<h3 id="balance-sheet-channel">Balance Sheet Channel</h3>
+<ol>
+<li>Firm's Balance Sheet: decrease in real interest rate, and increase in stock price. Firm's Net Worth will increase (similar to the Q theory). Therefore, decrease. Therefore, less adverse selection and decrease in moral hazard. Hence, increase in lending, and increase in inestment, resulting in aggregate demand</li>
+<li>Cash Flow: decrease in real interst rate $\implies$ Increase in stock price $\implies$ Increase in Firm's cash flow $\implies$ Increase in liquidity of firms $\implies$ Increase in Pay bills $\implies$ Decease in adverse Selections and decrease Moral Hazard. Therefore, increase in lending and investment, resulting in increase in aggregate demand.</li>
+<li>Hosehold Liqudity: Decrease in real interest rate $\implies$ Increase in value of financial assets. Therefore decrease in financial Problems. Therefore increase in consumer .. and housing $\implies$ Increase in aggregate demand.</li>
+</ol>
+<hr>
+<ul>
+<li>Adverse Selection: You never know if you select the bad borrower that does not return the money.</li>
+<li>Moral Hazard: Good people can become bad and decide not to pay back.</li>
+</ul>
+
+</body>
+</html>

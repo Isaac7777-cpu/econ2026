@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week8.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="the-is-curve">The IS Curve</h1>
+<ul>
+<li>Understanding unemployment rates</li>
+<li>Aggregate Demand - Aggregate Supply Framework
+<ul>
+<li>Short change in GDP, caused by AD!</li>
+</ul>
+</li>
+</ul>
+<p>IS =&gt; interest rate (r) and GDP (y)</p>
+<ul>
+<li>Why fluctuations happens =&gt; Identifying the problems</li>
+<li>Role of Monetary Policy in correcting fluctuations</li>
+</ul>
+<p>We need to understand:</p>
+<ul>
+<li>Two types of expenditures:
+<ul>
+<li>Actual Expenditures</li>
+<li>Planned Expenditures
+<ul>
+<li>Has implication in the GDP</li>
+<li>Hence, the change in planned expenditures is important</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Domestically produced goods and services</strong><br>
+demand by four different factors:</p>
+<ul>
+<li>households</li>
+<li>Foreigns</li>
+<li>Firms</li>
+<li>Government</li>
+</ul>
+<p>aggregate demand (total amount of output, demand): $y^{ad}$</p>
+<p>$$Y^{ad} = \text{Planned Expenditure} = C + I + G + NX$$</p>
+<ul>
+<li>$C$ is the aggregate consumption</li>
+<li>$I$ is the planned investment spending</li>
+<li>$G$ Goverment purchases</li>
+<li>$NX$ Net export</li>
+</ul>
+<h2 id="consumption-expenditures-mainly-made-by-household">Consumption Expenditures (mainly made by Household)</h2>
+<p>$$C = \bar{C} + cY_D$$</p>
+<ul>
+<li>$\bar{C}$ is autonomous consumer expenditure: the amount of consumer expenditure that is independent of disposable income (how much will be spent when disposable income is zero)</li>
+<li>$c$ marginal propensity of consumption =&gt; Depends on how many you are consuming (powerpoint uses notation $mpc$)</li>
+<li>$Y_D$ disposable income</li>
+</ul>
+<p>$$Y_D = Y - T$$</p>
+<ul>
+<li>$Y$ is total income</li>
+<li>$T$ tax</li>
+</ul>
+<h3 id="investment">Investment</h3>
+<p>Two types</p>
+<ul>
+<li>Fixed Investment
+<ul>
+<li>New Housing, equipments, structures, etc</li>
+<li>Always planned</li>
+</ul>
+</li>
+<li>Inventory Investment
+<ul>
+<li>Can be unplanned</li>
+<li>finish products, etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="example-toyota">Example: Toyota</h4>
+<ul>
+<li>31st Dec 2023: 100,000 cars inventory</li>
+<li>31st Dec 2023: 150,000 cars inventory</li>
+<li>Change in inventory = 50,000
+<ul>
+<li>Note that this an unplanned increase in inventory</li>
+</ul>
+</li>
+</ul>
+<h2 id="import">Import</h2>
+<p>$$I = \text{(Planned) Fixed Investment} + \text{Planned Inventory Investment}$$</p>
+<p>Then, we can write this by decomposing into fixed part and other
+$$I = \bar{I} - d \cdot r_c$$</p>
+<ul>
+<li>$\bar{I}$ autonomous investment (fixed)</li>
+<li>$d$ captures the responsiveness of investments
+<ul>
+<li>$d \in [0,1]$</li>
+<li>if $d$ is zero, then it is not responsive at all.</li>
+</ul>
+</li>
+<li>$rc$ the real cost of investment / real cost of borrowing =&gt; very related to the real interest rate.</li>
+</ul>
+<h4 id="firms-decision">Firms Decision</h4>
+<ul>
+<li>Firms without excess funds
+<ul>
+<li>Need to borrow to make an investment</li>
+<li>Borrow and invest only if the rate of return from investment is larger than the real cost of investment ($rc$)</li>
+</ul>
+</li>
+<li>Firms with excess funds
+<ul>
+<li>Do not need to borrow</li>
+<li>Invest only if rate of return &gt; Opportunitiy cost of investment =&gt; $r_c$</li>
+</ul>
+</li>
+</ul>
+<p>$$r_c = r + \bar{f}$$</p>
+<ul>
+<li>$r$ real interest rate</li>
+<li>$\bar{f}$ financial frictions
+<ul>
+<li>The cost you have to pay when you try perform financing</li>
+<li>Direcly related to asymmetric information
+<ul>
+<li>Adverse Selection
+<ul>
+<li>You don't know as much as the person who is lending you money</li>
+</ul>
+</li>
+<li>Moral Hozard
+<ul>
+<li>They might change the behaviour and not pay back</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>During a recession, the risk increases substantially.</p>
+<p>Now, we can write the investment function as follow:
+$$I = \bar{I} - d(r + \bar{f})$$</p>
+<ul>
+<li>Increase in $\bar{I}$ increases $I$</li>
+<li>Decrease in $r$ increases $I$</li>
+<li>Decrease in financial friction increases $I$</li>
+</ul>
+<h2 id="net-export-function">Net Export Function</h2>
+<p>$$NX = \bar{NX} - xr$$</p>
+<ul>
+<li>$\bar{NX}$ autonomous net export</li>
+<li>$x$ responsiveness of NX
+<ul>
+<li>$0 \leq x \leq 1$</li>
+</ul>
+</li>
+<li>$r$ reall interest rate</li>
+</ul>
+<p>Inference:<br>
+increase in domestic interest rate =&gt; increase in demand in domestic asset =&gt; increase in domestic currency (appreciation) =&gt; increase in import and decrease in export =&gt; decrease in net export.</p>
+<h2 id="government-expenditure-g">Government Expenditure (G)</h2>
+<p>$$G = \bar{G}$$</p>
+<ul>
+<li>$\bar{G}$ fixed autonomous expenditure</li>
+</ul>
+<p>$$T = \bar{T}$$</p>
+<ul>
+<li>$\bar{T}$ fixed taxes</li>
+</ul>
+<p>Hence,
+$$Y_D = Y - T \implies Y_D = Y - \bar{T}$$</p>
+<p>Hence, increase in t bar will lead to decrease in a aggregate demand and hence decrease in consumption expenditure.</p>
+<h2 id="goods-market-equilibrium">Goods Market Equilibrium</h2>
+<p>total quantity of output = total amount of agg. demand
+$$Y = Y^{ad}$$
+This means that what is planned should be what you demand.</p>
+<p>Hence, using the equation above,
+$$Y = Y^{ad} = \text{Planned Expenditure} = C + I + G + NX$$</p>
+<p>Hence,
+$$Y = \bar{C} + cY_D +  \bar{I} - d(r + \bar{f}) + \bar{G} + \bar{NX} - xr$$
+Then, we can colect the autonomous term ($\bar{A}$)
+$$Y = (\bar{C} - c\bar{T} + \bar{I} - d\bar{f} + \bar{G} + \bar{NX}) + cY_D - d \cdot r_c - xr$$
+Hence,
+$$Y = \bar{A} + (cY - dr -xr)$$
+With simple rearranging:
+$$ Y = \frac{\bar{A}}{1 - c} - \frac{d + x}{1 - c}r $$</p>
+<p>This is then known as the IS curve equation.</p>
+<p>Note that the first term will shift the IS curve and the next term move along the IS curve.</p>
+<p>Any increase in the autonomous term of C, I, G, and NX or decrease in T or f will lead to shift in IS curves to the right.</p>
+<p>Then, by calculating the two coefficients, we obtain the IS curve.</p>
+<p>Actual output &gt; Aeg Demand =&gt; Uncold imasfasnf... =&gt; cut production</p>
+<p>Actual output &lt; aeg demand =&gt; increase in production</p>
+<p>Suppose there is an increase =&gt; then the shift increases. Then, we have a new IS curve that is shifted to the right. Then with the same interest rate would produce higher demand.</p>
+<p>Also, suppose there is an increase in the tax, then at the same level of interest rate, then aggregate demand will decrease.</p>
+<h1 id="central-bank-and-monetary-policy-mp">Central Bank and Monetary Policy (MP)</h1>
+<ul>
+<li>Understand how MP affects AD</li>
+<li>CBs use the short-term nominal interest rate (policy rate) as their main tool!
+<ul>
+<li>in the federal funds market =&gt; inter-bank borrowing and borrowing from the CB</li>
+<li>This market is not open to us.</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-the-policy-rate-is-determined">How the Policy Rate is Determined?</h2>
+<p>Denote policy rate here by ($i$)</p>
+<ul>
+<li>policy rate is the nominal rate</li>
+<li>Real interest rate ($r$) affects NX and I
+<ul>
+<li>$r = i - \pi^e$ =&gt; Simplified Fisher's Equation</li>
+<li>real interest rate is the difference between the nominal interest rate and expected inflation rate.</li>
+</ul>
+</li>
+<li>Change the nominal interest rate ($i$) will affect $r$ if inflation expectation is constant.</li>
+<li>Usually the inflation expectation does not change that quick.
+<ul>
+<li>It sticks around a bit</li>
+</ul>
+</li>
+<li>Prices are <strong>STICKY</strong> =&gt; Price changes are <strong>SLOW</strong></li>
+<li>Hence, CB's MP will work.</li>
+</ul>
+<h2 id="monetary-policy-curve-equation">Monetary Policy Curve Equation</h2>
+<p>CB's aim is always to change the real interest rate. The equation is given as the following:</p>
+<p>$$r = \bar{r} + \lambda\pi$$</p>
+<p>where</p>
+<ul>
+<li>$\bar{r}$ is the autonomous component of real interest rate</li>
+<li>$\lambda$ is the responsiveness of real interest rate to change tin $\pi$</li>
+<li>$\pi$ is the inflation rate.</li>
+</ul>
+<p>Why we have this upward monetary policy curve (why it is in this form)?</p>
+<ul>
+<li>Price Stabilisation =&gt; CBs follow <strong>TAYLOR PRINCIPLE</strong></li>
+<li>Taylor Principle:
+<ul>
+<li>Increase in policy rates by more than any raise in $\pi^e$ so that the increase in real interest rate when there is the raise in inflation.</li>
+</ul>
+</li>
+</ul>
+<p>Q: What happen if we do not follow Taylor Principle?
+When there is a increase in inflation rate will decrease the real interest rate. Then this will lead to increase in GDP and causes another increase in inflation. This loop will keep going up, known as a Hyper Inflation (2020 - 2023 in Turkey).</p>
+<h3 id="shifts-in-mp">Shifts in MP</h3>
+<ul>
+<li>Expansionary MP (MP easing) =&gt; decrease in real interest rate</li>
+<li>Contractionary MP (MP tightning) =&gt; increase in real interest rate</li>
+<li>Autonomous easing of MP =&gt; decrease in $\bar{r}$</li>
+<li>Autonomous tightning of MP =&gt; increase in $\bar{r}$</li>
+</ul>
+<h2 id="generic-formula-for-ad">Generic Formula for AD</h2>
+<p>IS:
+$$ Y = \frac{\bar{A}}{1 - c} - \frac{d + x}{1 - c}r $$
+where,
+$$ \bar{A} = \bar{C} - c\bar{T} + \bar{I} - d\bar{f} + \bar{G} + \bar{NX}$$</p>
+<p>MP:
+$$r = \bar{r} + \lambda\pi$$</p>
+<p>Hence, the AD equation:
+$$ Y = \frac{\bar{A}}{1 - c} - \frac{d + x}{1 - c}(\bar{r} + \lambda\pi) $$
+where,
+$$ \bar{A} = \bar{C} - c\bar{T} + \bar{I} - d\bar{f} + \bar{G} + \bar{NX}$$</p>
+<p>Hence, shifts in AD</p>
+<ul>
+<li>Shift in IS curve $\impliedby$ change in the autonomous term
+<ul>
+<li>Right shiftting:
+<ul>
+<li>increase in C, I, G, NX autonomous</li>
+<li>decrease in T, I autonomous</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Shift in MP curve $\impliedby$ change in monetary policy
+<ul>
+<li>Contractionary MP:
+<ul>
+<li>$\bar{i}$ increase shifts MP up $\implies$ AD will shift to left (contration)</li>
+</ul>
+</li>
+<li>Expansionary MP:
+<ul>
+<li>vice versa</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>
