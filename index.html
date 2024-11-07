@@ -68,6 +68,10 @@
         <button onclick="simulateTilt(0)">Neutral</button>
         <button onclick="simulateTilt(15)">Tilt Right</button> -->
     </div>
+    <div id="mobile-controls" style="display: none;">
+        <button id="move-up">Up</button>
+        <button id="move-down">Down</button>
+    </div>
     <script>
         const canvas = document.getElementById('game');
         const context = canvas.getContext('2d');
@@ -77,7 +81,7 @@
         const ballSize = 10;
 
         let gameStarted = false;
-        let ballSpeedIncrement = 0.1;
+        let ballSpeedIncrement = 0.15;
 
         const player = {
             x: 0,
@@ -214,22 +218,38 @@
             }
         }
 
-        canvas.addEventListener('click', startGame);
+        let movingUp = true; // Track current paddle movement direction
+
+        function togglePaddleDirection() {
+            if (movingUp) {
+                player.dy = 6; // Change to moving down
+            } else {
+                player.dy = -6; // Change to moving up
+            }
+            movingUp = !movingUp;
+        }
+
+        // Replace existing canvas click listener
+        canvas.removeEventListener('click', startGame);
+        canvas.addEventListener('click', () => {
+            if (!gameStarted) {
+                startGame();
+            } else {
+                togglePaddleDirection();
+            }
+        });
+
         document.addEventListener('keydown', keyDown);
         document.addEventListener('keyup', keyUp);
 
-        window.addEventListener('deviceorientation', (event) => {
-            if (gameStarted) {
-                const tilt = event.gamma; // left-to-right tilt in degrees
-                player.dy = tilt > 5 ? 6 : tilt < -5 ? -6 : 0;
+        canvas.addEventListener("touchstart", (e) => {
+            e.preventDefault(); // Prevent scrolling/zooming
+            if (!gameStarted) {
+                startGame();
+            } else {
+                togglePaddleDirection();
             }
-        }, true);
-
-        // function simulateTilt(tilt) {
-        //     if (gameStarted) {
-        //         player.dy = tilt > 10 ? 6 : tilt < -10 ? -6 : 0;
-        //     }
-        // }
+        });
 
         loop();
     </script>
