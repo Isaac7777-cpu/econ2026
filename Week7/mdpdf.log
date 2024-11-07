@@ -1,0 +1,360 @@
+    INFO: 2024-09-18 11:11:13,586:               log.py:   20: Logging to /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/mdpdf.log
+   DEBUG: 2024-09-18 11:11:13,587:               cli.py:  103: Week7.md
+    INFO: 2024-09-18 11:11:13,588:         converter.py:   14: Week7.md
+   DEBUG: 2024-09-18 11:11:13,592:      pdf_renderer.py:  470: printSegment: The Foreign Exchange Market
+   DEBUG: 2024-09-18 11:11:13,595:      pdf_renderer.py:  470: printSegment: Exchange Rates and Trade
+   DEBUG: 2024-09-18 11:11:13,596:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,597:      pdf_renderer.py:  470: printSegment: A nominal rate
+   DEBUG: 2024-09-18 11:11:13,600:      pdf_renderer.py:  470: printSegment:  is the price of one currency in terms of another currency
+   DEBUG: 2024-09-18 11:11:13,602:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,605:      pdf_renderer.py:  470: printSegment: Changes in the exchange rate between the dollar and foreign currencies affect the prices that
+   DEBUG: 2024-09-18 11:11:13,605:      pdf_renderer.py:  470: printSegment: Australian consumers pay for foreign imports.
+   DEBUG: 2024-09-18 11:11:13,606:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,606:      pdf_renderer.py:  470: printSegment: Appreciation
+   DEBUG: 2024-09-18 11:11:13,607:      pdf_renderer.py:  470: printSegment:  is an increase in the value of a currency in exchange for another currency.
+   DEBUG: 2024-09-18 11:11:13,607:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,608:      pdf_renderer.py:  470: printSegment: Depreciation
+   DEBUG: 2024-09-18 11:11:13,609:      pdf_renderer.py:  470: printSegment:  is a decrease in the value of a currency in exchange for another currency.
+   DEBUG: 2024-09-18 11:11:13,609:      pdf_renderer.py:  470: printSegment: Direct Quotations
+   DEBUG: 2024-09-18 11:11:13,610:      pdf_renderer.py:  470: printSegment: Direct quotations
+   DEBUG: 2024-09-18 11:11:13,613:      pdf_renderer.py:  470: printSegment:  are exchange rates quoted as units of domestic currency per unit of foreign currency. 1.29 AUD
+   DEBUG: 2024-09-18 11:11:13,614:      pdf_renderer.py:  470: printSegment: (domestic currency) for 1 USD (foreign currency) as of 18/04/2021.
+   DEBUG: 2024-09-18 11:11:13,614:      pdf_renderer.py:  470: printSegment: Indirect Quotations
+   DEBUG: 2024-09-18 11:11:13,615:      pdf_renderer.py:  470: printSegment: Indirect quotations
+   DEBUG: 2024-09-18 11:11:13,618:      pdf_renderer.py:  470: printSegment:  are exchange rates as units of foreign currency per unit of domestic currency. 0.77 USD
+   DEBUG: 2024-09-18 11:11:13,619:      pdf_renderer.py:  470: printSegment: (foreign currency)  for 1 AUD (domestic currency) as of 18/04/2021
+   DEBUG: 2024-09-18 11:11:13,620:      pdf_renderer.py:  470: printSegment: <ins>
+   DEBUG: 2024-09-18 11:11:13,621:      pdf_renderer.py:  470: printSegment: Exchange rates are volatile
+   DEBUG: 2024-09-18 11:11:13,623:      pdf_renderer.py:  470: printSegment: !
+   DEBUG: 2024-09-18 11:11:13,624:      pdf_renderer.py:  470: printSegment: !
+   DEBUG: 2024-09-18 11:11:13,625:      pdf_renderer.py:  470: printSegment: </ins>
+   DEBUG: 2024-09-18 11:11:13,625:      pdf_renderer.py:  470: printSegment: Real Exchange Rate
+   DEBUG: 2024-09-18 11:11:13,626:      pdf_renderer.py:  470: printSegment: The 
+   DEBUG: 2024-09-18 11:11:13,627:      pdf_renderer.py:  470: printSegment: real exchange rate
+   DEBUG: 2024-09-18 11:11:13,628:      pdf_renderer.py:  470: printSegment:  is the rate at which goods and services in one country can be exchanged for goods and
+   DEBUG: 2024-09-18 11:11:13,629:      pdf_renderer.py:  470: printSegment: services in another country.
+   DEBUG: 2024-09-18 11:11:13,629:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,630:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,630:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,631:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,631:      pdf_renderer.py:  470: printSegment: text{readl exchange rate} = 
+   DEBUG: 2024-09-18 11:11:13,632:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,632:      pdf_renderer.py:  470: printSegment: frac{
+   DEBUG: 2024-09-18 11:11:13,633:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,633:      pdf_renderer.py:  470: printSegment: text{exchange rate} 
+   DEBUG: 2024-09-18 11:11:13,634:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,634:      pdf_renderer.py:  470: printSegment: times 
+   DEBUG: 2024-09-18 11:11:13,635:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,636:      pdf_renderer.py:  470: printSegment: text{price of good in
+   DEBUG: 2024-09-18 11:11:13,636:      pdf_renderer.py:  470: printSegment: domestic}}{
+   DEBUG: 2024-09-18 11:11:13,637:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,637:      pdf_renderer.py:  470: printSegment: text{price of same good in foreign}}
+   DEBUG: 2024-09-18 11:11:13,638:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,638:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,639:      pdf_renderer.py:  470: printSegment: For example, we can do this with the Big Mac price
+   DEBUG: 2024-09-18 11:11:13,642:      pdf_renderer.py:  235: /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/big_mac_comparison_example.png, 2162, 1618
+   DEBUG: 2024-09-18 11:11:13,709:      pdf_renderer.py:  470: printSegment: Note that the story can be completely different when comparing big mac versus comparin CPI
+   DEBUG: 2024-09-18 11:11:13,710:      pdf_renderer.py:  470: printSegment: Exchange Rates in the Long Run
+   DEBUG: 2024-09-18 11:11:13,710:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,711:      pdf_renderer.py:  470: printSegment: The law of one price
+   DEBUG: 2024-09-18 11:11:13,711:      pdf_renderer.py:  470: printSegment:  is the idea that identical products should sell for the same price everywhere.
+   DEBUG: 2024-09-18 11:11:13,712:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,712:      pdf_renderer.py:  470: printSegment: The law of one price is the basis for 
+   DEBUG: 2024-09-18 11:11:13,713:      pdf_renderer.py:  470: printSegment: the theory of purchasing power parity (PPP)
+   DEBUG: 2024-09-18 11:11:13,713:      pdf_renderer.py:  470: printSegment: .
+   DEBUG: 2024-09-18 11:11:13,714:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,714:      pdf_renderer.py:  470: printSegment: Theory of purchasing power parity (PPP)
+   DEBUG: 2024-09-18 11:11:13,716:      pdf_renderer.py:  470: printSegment:  states that exchange rates move to equalize the
+   DEBUG: 2024-09-18 11:11:13,716:      pdf_renderer.py:  470: printSegment: purchasing power of different currencies.
+   DEBUG: 2024-09-18 11:11:13,717:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,720:      pdf_renderer.py:  470: printSegment: In the long run, an exchange rate should be at a level that the equivalent amount of any country’s
+   DEBUG: 2024-09-18 11:11:13,728:      pdf_renderer.py:  470: printSegment: currency can buy the same amount of goods and services.
+   DEBUG: 2024-09-18 11:11:13,729:      pdf_renderer.py:  470: printSegment: Example of the Theory of Purchasing Power Parity (PPP)
+   DEBUG: 2024-09-18 11:11:13,729:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,730:      pdf_renderer.py:  470: printSegment: Purchasing Power Parity Theorems $
+   DEBUG: 2024-09-18 11:11:13,730:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,732:      pdf_renderer.py:  470: printSegment: implies$ The different in price determines the nominal
+   DEBUG: 2024-09-18 11:11:13,732:      pdf_renderer.py:  470: printSegment: exchange rate between two currencies.
+   DEBUG: 2024-09-18 11:11:13,733:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,734:      pdf_renderer.py:  470: printSegment: Arbitrage profits will exist if the nominal rate is different from the actual price-level difference
+   DEBUG: 2024-09-18 11:11:13,734:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,734:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,735:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,736:      pdf_renderer.py:  470: printSegment: implies$ Maney exchange for the two currencies
+   DEBUG: 2024-09-18 11:11:13,736:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,736:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,737:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,737:      pdf_renderer.py:  470: printSegment: uparrow$ Demand for one current $
+   DEBUG: 2024-09-18 11:11:13,738:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,739:      pdf_renderer.py:  470: printSegment: implies$ the current will appreciate (and the
+   DEBUG: 2024-09-18 11:11:13,739:      pdf_renderer.py:  470: printSegment: other depreciate)
+   DEBUG: 2024-09-18 11:11:13,740:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,740:      pdf_renderer.py:  470: printSegment: Then, the gap between the price level is fixed by changing the nominal rate
+   DEBUG: 2024-09-18 11:11:13,741:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,742:      pdf_renderer.py:  470: printSegment: All arbitrage profits gaps are used.
+   DEBUG: 2024-09-18 11:11:13,742:      pdf_renderer.py:  470: printSegment: PPP
+   DEBUG: 2024-09-18 11:11:13,743:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-09-18 11:11:13,743:      pdf_renderer.py:  470: printSegment: s Prediction
+   DEBUG: 2024-09-18 11:11:13,743:      pdf_renderer.py:  470: printSegment: If $
+   DEBUG: 2024-09-18 11:11:13,744:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,744:      pdf_renderer.py:  470: printSegment: pi^D > 
+   DEBUG: 2024-09-18 11:11:13,745:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,745:      pdf_renderer.py:  470: printSegment: pi^F 
+   DEBUG: 2024-09-18 11:11:13,745:      pdf_renderer.py:  470: printSegment: ;
+   DEBUG: 2024-09-18 11:11:13,746:      pdf_renderer.py:  470: printSegment:  (
+   DEBUG: 2024-09-18 11:11:13,746:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,747:      pdf_renderer.py:  470: printSegment: pi 
+   DEBUG: 2024-09-18 11:11:13,747:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,747:      pdf_renderer.py:  470: printSegment: text{ is inflation rate})$, the domestic currency depreciates
+   DEBUG: 2024-09-18 11:11:13,748:      pdf_renderer.py:  470: printSegment: !
+   DEBUG: 2024-09-18 11:11:13,748:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,749:      pdf_renderer.py:  470: printSegment: $$e = 
+   DEBUG: 2024-09-18 11:11:13,749:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,749:      pdf_renderer.py:  470: printSegment: frac{E 
+   DEBUG: 2024-09-18 11:11:13,750:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,750:      pdf_renderer.py:  470: printSegment: times
+   DEBUG: 2024-09-18 11:11:13,751:      pdf_renderer.py:  470: printSegment: P^D}{P^F}$$
+   DEBUG: 2024-09-18 11:11:13,751:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,751:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,752:      pdf_renderer.py:  470: printSegment: %
+   DEBUG: 2024-09-18 11:11:13,752:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,752:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,753:      pdf_renderer.py:  470: printSegment: Delta e = 
+   DEBUG: 2024-09-18 11:11:13,753:      pdf_renderer.py:  470: printSegment: %
+   DEBUG: 2024-09-18 11:11:13,754:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,754:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,754:      pdf_renderer.py:  470: printSegment: Delta E + (
+   DEBUG: 2024-09-18 11:11:13,755:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,755:      pdf_renderer.py:  470: printSegment: pi^D - 
+   DEBUG: 2024-09-18 11:11:13,756:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,756:      pdf_renderer.py:  470: printSegment: pi^F)$$
+   DEBUG: 2024-09-18 11:11:13,756:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,757:      pdf_renderer.py:  470: printSegment: Note that $
+   DEBUG: 2024-09-18 11:11:13,757:      pdf_renderer.py:  470: printSegment: %
+   DEBUG: 2024-09-18 11:11:13,758:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,758:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,759:      pdf_renderer.py:  470: printSegment: Delta e$ is the percentage change in the
+   DEBUG: 2024-09-18 11:11:13,759:      pdf_renderer.py:  470: printSegment: real exchange rate.
+   DEBUG: 2024-09-18 11:11:13,760:      pdf_renderer.py:  470: printSegment: However, note that if PPP holds, $e = 1 
+   DEBUG: 2024-09-18 11:11:13,760:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,761:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,761:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,762:      pdf_renderer.py:  470: printSegment: Delta e = 0$
+   DEBUG: 2024-09-18 11:11:13,762:      pdf_renderer.py:  470: printSegment: Hence $0 = 
+   DEBUG: 2024-09-18 11:11:13,762:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,763:      pdf_renderer.py:  470: printSegment: Delta E + (
+   DEBUG: 2024-09-18 11:11:13,763:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,764:      pdf_renderer.py:  470: printSegment: pi^F - 
+   DEBUG: 2024-09-18 11:11:13,764:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,765:      pdf_renderer.py:  470: printSegment: pi^D) 
+   DEBUG: 2024-09-18 11:11:13,765:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,765:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,766:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,766:      pdf_renderer.py:  470: printSegment: Delta E = 
+   DEBUG: 2024-09-18 11:11:13,767:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,767:      pdf_renderer.py:  470: printSegment: pi^F - 
+   DEBUG: 2024-09-18 11:11:13,768:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,768:      pdf_renderer.py:  470: printSegment: pi^D$
+   DEBUG: 2024-09-18 11:11:13,769:      pdf_renderer.py:  470: printSegment: Hence the difference in the inflation rates explain nominal exchage rate difference in the long-term.
+   DEBUG: 2024-09-18 11:11:13,769:      pdf_renderer.py:  470: printSegment: Limitations to the PPP
+   DEBUG: 2024-09-18 11:11:13,770:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,771:      pdf_renderer.py:  470: printSegment: Real-world complications keep PPP from being a complete explanation of exchange rates:
+   DEBUG: 2024-09-18 11:11:13,771:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,772:      pdf_renderer.py:  470: printSegment: Not all products can be traded internationally
+   DEBUG: 2024-09-18 11:11:13,772:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,773:      pdf_renderer.py:  470: printSegment: Products are differentiated
+   DEBUG: 2024-09-18 11:11:13,773:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,774:      pdf_renderer.py:  470: printSegment: Governments impose barriers to trade, e.g., tariffs and quotas
+   DEBUG: 2024-09-18 11:11:13,774:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,775:      pdf_renderer.py:  470: printSegment: A tariff is a tax a government imposes on imports.
+   DEBUG: 2024-09-18 11:11:13,776:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,777:      pdf_renderer.py:  470: printSegment: A quota is a limit a government imposes on the quantity of a good
+   DEBUG: 2024-09-18 11:11:13,777:      pdf_renderer.py:  470: printSegment: that can be imported.
+   DEBUG: 2024-09-18 11:11:13,778:      pdf_renderer.py:  470: printSegment: Should Big Macs Have the Same Price Everywhere?
+   DEBUG: 2024-09-18 11:11:13,779:      pdf_renderer.py:  235: /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/big_mac_prices.png, 964, 608
+   DEBUG: 2024-09-18 11:11:13,794:      pdf_renderer.py:  470: printSegment: A Demand and Supply Model of Short-Run
+   DEBUG: 2024-09-18 11:11:13,795:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,797:      pdf_renderer.py:  470: printSegment: The model determines both the equilibrium nominal exchange rate and the equilibrium real
+   DEBUG: 2024-09-18 11:11:13,798:      pdf_renderer.py:  470: printSegment: exchange rate, holding price levels constant.
+   DEBUG: 2024-09-18 11:11:13,798:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,800:      pdf_renderer.py:  470: printSegment: The demand for Australian dollars represents the demand by foreign households and firms for
+   DEBUG: 2024-09-18 11:11:13,800:      pdf_renderer.py:  470: printSegment: Australian goods and Australian financial assets.
+   DEBUG: 2024-09-18 11:11:13,801:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,805:      pdf_renderer.py:  470: printSegment: The supply of dollars in exchange for a foreign currency is determined by the willingness of
+   DEBUG: 2024-09-18 11:11:13,805:      pdf_renderer.py:  470: printSegment: households and firms that own dollars to exchange them for the foreign currency.
+   DEBUG: 2024-09-18 11:11:13,806:      pdf_renderer.py:  470: printSegment: Explaination
+   DEBUG: 2024-09-18 11:11:13,806:      pdf_renderer.py:  470: printSegment: Two countries
+   DEBUG: 2024-09-18 11:11:13,807:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,807:      pdf_renderer.py:  470: printSegment: Domenstic -> interest rate $i^D$
+   DEBUG: 2024-09-18 11:11:13,807:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,808:      pdf_renderer.py:  470: printSegment: Foreign -> intereate rate $i^F$
+   DEBUG: 2024-09-18 11:11:13,808:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,809:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,809:      pdf_renderer.py:  470: printSegment: E
+   DEBUG: 2024-09-18 11:11:13,809:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,810:      pdf_renderer.py:  470: printSegment: t 
+   DEBUG: 2024-09-18 11:11:13,810:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,811:      pdf_renderer.py:  470: printSegment: text{ : current exchange rate} 
+   DEBUG: 2024-09-18 11:11:13,811:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,811:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,812:      pdf_renderer.py:  470: printSegment: E^e
+   DEBUG: 2024-09-18 11:11:13,812:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,812:      pdf_renderer.py:  470: printSegment: {t+1} 
+   DEBUG: 2024-09-18 11:11:13,813:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,813:      pdf_renderer.py:  470: printSegment: text{ : future expected exchange rate}
+   DEBUG: 2024-09-18 11:11:13,814:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,814:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,815:      pdf_renderer.py:  470: printSegment: $$
+   DEBUG: 2024-09-18 11:11:13,815:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,815:      pdf_renderer.py:  470: printSegment: text{Expected rate of app/dep} = 
+   DEBUG: 2024-09-18 11:11:13,816:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,816:      pdf_renderer.py:  470: printSegment: frac{E^e
+   DEBUG: 2024-09-18 11:11:13,817:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,817:      pdf_renderer.py:  470: printSegment: {t+1} - E
+   DEBUG: 2024-09-18 11:11:13,818:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,818:      pdf_renderer.py:  470: printSegment: t}{E
+   DEBUG: 2024-09-18 11:11:13,818:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,819:      pdf_renderer.py:  470: printSegment: t}$$
+   DEBUG: 2024-09-18 11:11:13,821:      pdf_renderer.py:  470: printSegment: Now, if this expected rate is positive, we will expect an appreciation, while if it is negative, we expect a depreciation
+   DEBUG: 2024-09-18 11:11:13,821:      pdf_renderer.py:  470: printSegment: in the domestic currency.
+   DEBUG: 2024-09-18 11:11:13,822:      pdf_renderer.py:  470: printSegment: Then, we can calculate returns in terms of foreign currency.
+   DEBUG: 2024-09-18 11:11:13,823:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,823:      pdf_renderer.py:  470: printSegment: Expected returns on domestic assets in terms of foreign currency.
+   DEBUG: 2024-09-18 11:11:13,824:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,824:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,825:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,825:      pdf_renderer.py:  470: printSegment: displaystyle R^D = i^D + 
+   DEBUG: 2024-09-18 11:11:13,826:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,826:      pdf_renderer.py:  470: printSegment: frac{E^e
+   DEBUG: 2024-09-18 11:11:13,827:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,827:      pdf_renderer.py:  470: printSegment: {t+1} - E
+   DEBUG: 2024-09-18 11:11:13,828:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,828:      pdf_renderer.py:  470: printSegment: t}{E
+   DEBUG: 2024-09-18 11:11:13,833:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,833:      pdf_renderer.py:  470: printSegment: t}$
+   DEBUG: 2024-09-18 11:11:13,833:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,835:      pdf_renderer.py:  470: printSegment: Note that the second term is gain/loss made by foreigners from converting foreign
+   DEBUG: 2024-09-18 11:11:13,836:      pdf_renderer.py:  470: printSegment: currency into domestic currency
+   DEBUG: 2024-09-18 11:11:13,836:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,837:      pdf_renderer.py:  470: printSegment: $R^D > R^F 
+   DEBUG: 2024-09-18 11:11:13,837:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,837:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,838:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,838:      pdf_renderer.py:  470: printSegment: uparrow 
+   DEBUG: 2024-09-18 11:11:13,839:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,839:      pdf_renderer.py:  470: printSegment: text{Demand for domestic assets}$
+   DEBUG: 2024-09-18 11:11:13,840:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,841:      pdf_renderer.py:  470: printSegment: Hence, in the equilibriun $R^D = R^F$
+   DEBUG: 2024-09-18 11:11:13,841:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,842:      pdf_renderer.py:  470: printSegment: This would imply that in the equilibrium
+   DEBUG: 2024-09-18 11:11:13,842:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,843:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,843:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,844:      pdf_renderer.py:  470: printSegment: displaystyle i^D + 
+   DEBUG: 2024-09-18 11:11:13,844:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,845:      pdf_renderer.py:  470: printSegment: frac{E^e
+   DEBUG: 2024-09-18 11:11:13,845:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,846:      pdf_renderer.py:  470: printSegment: {t+1} - E
+   DEBUG: 2024-09-18 11:11:13,846:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,847:      pdf_renderer.py:  470: printSegment: t}{E
+   DEBUG: 2024-09-18 11:11:13,847:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,848:      pdf_renderer.py:  470: printSegment: t} = i^F$
+   DEBUG: 2024-09-18 11:11:13,848:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,849:      pdf_renderer.py:  470: printSegment: Expected returns on foreign assets in terms of foreign currency.
+   DEBUG: 2024-09-18 11:11:13,850:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,850:      pdf_renderer.py:  470: printSegment: Well, the second case is fairly trivial, it is simply just $R^F = i^F$
+   DEBUG: 2024-09-18 11:11:13,851:      pdf_renderer.py:  470: printSegment: Hence, we get the following with simple arithematic:
+   DEBUG: 2024-09-18 11:11:13,852:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,852:      pdf_renderer.py:  470: printSegment: $$E
+   DEBUG: 2024-09-18 11:11:13,853:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,853:      pdf_renderer.py:  470: printSegment: t = 
+   DEBUG: 2024-09-18 11:11:13,854:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,854:      pdf_renderer.py:  470: printSegment: frac{E^e
+   DEBUG: 2024-09-18 11:11:13,855:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,855:      pdf_renderer.py:  470: printSegment: {t+1}}{i^F - i^D + 1}$$
+   DEBUG: 2024-09-18 11:11:13,856:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,858:      pdf_renderer.py:  470: printSegment: Note that the
+   DEBUG: 2024-09-18 11:11:13,859:      pdf_renderer.py:  470: printSegment: above equation is called the interest rates parity condition. And, we get the following statements:
+   DEBUG: 2024-09-18 11:11:13,860:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,860:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,861:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,861:      pdf_renderer.py:  470: printSegment: uparrow E^e
+   DEBUG: 2024-09-18 11:11:13,862:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,862:      pdf_renderer.py:  470: printSegment: {t+1} 
+   DEBUG: 2024-09-18 11:11:13,863:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,864:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,864:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,865:      pdf_renderer.py:  470: printSegment: uparrow E
+   DEBUG: 2024-09-18 11:11:13,865:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,866:      pdf_renderer.py:  470: printSegment: t$
+   DEBUG: 2024-09-18 11:11:13,866:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,867:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,867:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,868:      pdf_renderer.py:  470: printSegment: uparrow i^F 
+   DEBUG: 2024-09-18 11:11:13,869:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,869:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,870:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,870:      pdf_renderer.py:  470: printSegment: downarrow E
+   DEBUG: 2024-09-18 11:11:13,871:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,871:      pdf_renderer.py:  470: printSegment: t$
+   DEBUG: 2024-09-18 11:11:13,872:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,873:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-09-18 11:11:13,873:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,874:      pdf_renderer.py:  470: printSegment: uparrow i^D 
+   DEBUG: 2024-09-18 11:11:13,874:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,875:      pdf_renderer.py:  470: printSegment: implies 
+   DEBUG: 2024-09-18 11:11:13,876:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,876:      pdf_renderer.py:  470: printSegment: uparrow E
+   DEBUG: 2024-09-18 11:11:13,877:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-09-18 11:11:13,877:      pdf_renderer.py:  470: printSegment: t$
+   DEBUG: 2024-09-18 11:11:13,878:      pdf_renderer.py:  470: printSegment: Summary
+   DEBUG: 2024-09-18 11:11:13,879:      pdf_renderer.py:  470: printSegment: We have two theorem to explain the exchange rate:
+   DEBUG: 2024-09-18 11:11:13,879:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,880:      pdf_renderer.py:  470: printSegment: Long-term
+   DEBUG: 2024-09-18 11:11:13,881:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,881:      pdf_renderer.py:  470: printSegment: PPP: $
+   DEBUG: 2024-09-18 11:11:13,882:      pdf_renderer.py:  470: printSegment: %
+   DEBUG: 2024-09-18 11:11:13,882:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-09-18 11:11:13,883:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,884:      pdf_renderer.py:  470: printSegment: Delta E = 
+   DEBUG: 2024-09-18 11:11:13,884:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,885:      pdf_renderer.py:  470: printSegment: pi^F - 
+   DEBUG: 2024-09-18 11:11:13,885:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-09-18 11:11:13,886:      pdf_renderer.py:  470: printSegment: pi^D$
+   DEBUG: 2024-09-18 11:11:13,887:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,887:      pdf_renderer.py:  470: printSegment: Short-term
+   DEBUG: 2024-09-18 11:11:13,888:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:13,888:      pdf_renderer.py:  470: printSegment: Interest Parity Conditions
+   DEBUG: 2024-09-18 11:11:13,889:      pdf_renderer.py:  470: printSegment: Some examples
+   DEBUG: 2024-09-18 11:11:13,890:      pdf_renderer.py:  235: /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/raise_in_expected_future.png, 2162, 1618
+   DEBUG: 2024-09-18 11:11:13,962:      pdf_renderer.py:  235: /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/raise_n_domestic_interest_rate.png, 2162, 1618
+   DEBUG: 2024-09-18 11:11:14,036:      pdf_renderer.py:  235: /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/Week7/raise_in_foreign_rate.png, 2162, 1618
+   DEBUG: 2024-09-18 11:11:14,108:      pdf_renderer.py:  470: printSegment: Demand and Supply Model
+   DEBUG: 2024-09-18 11:11:14,109:      pdf_renderer.py:  470: printSegment: Exchange rate Intervention
+   DEBUG: 2024-09-18 11:11:14,109:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:14,110:      pdf_renderer.py:  470: printSegment: Unsterlised Intervetions
+   DEBUG: 2024-09-18 11:11:14,110:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:14,111:      pdf_renderer.py:  470: printSegment: B (monetary base) is allowed to fluctuate
+   DEBUG: 2024-09-18 11:11:14,111:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:14,111:      pdf_renderer.py:  470: printSegment: Sterlilised interventions
+   DEBUG: 2024-09-18 11:11:14,112:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:14,112:      pdf_renderer.py:  470: printSegment: B will not change
+   DEBUG: 2024-09-18 11:11:14,113:      pdf_renderer.py:  470: printSegment: Unsterilised Interventions
+   DEBUG: 2024-09-18 11:11:14,113:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:  470: printSegment: Ex: CB buys foreign asets (sell domestic currency) with a check of $1 Billion
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 0, [1, 'The Foreign Exchange Market', 1, 68.0]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 1, [2, 'Exchange Rates and Trade', 1, 106.0]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 2, [3, 'Direct Quotations', 1, 211.20000000000002]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 3, [3, 'Indirect Quotations', 1, 270.0]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 4, [3, 'Real Exchange Rate', 1, 346.79999999999995]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 5, [2, 'Exchange Rates in the Long Run', 2, 491.04236817761335]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 6, [3, 'Example of the Theory of Purchasing Power Parity (PPP)', 2, 608.2423681776133]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 7, [3, 'PPP', 3, 110.4]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 8, [3, 'Limitations to the PPP', 3, 223.20000000000002]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 9, [3, 'Should Big Macs Have the Same Price Everywhere?', 3, 372.0]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 10, [2, 'A Demand and Supply Model of Short-Run', 4, 98.8]
+   DEBUG: 2024-09-18 11:11:14,114:      pdf_renderer.py:   53: 11, [3, 'Explaination', 4, 216.0]
+   DEBUG: 2024-09-18 11:11:14,115:      pdf_renderer.py:   53: 12, [2, 'Summary', 4, 617.1999999999999]
+   DEBUG: 2024-09-18 11:11:14,115:      pdf_renderer.py:   53: 13, [3, 'Some examples', 5, 110.4]
+   DEBUG: 2024-09-18 11:11:14,115:      pdf_renderer.py:   53: 14, [2, 'Demand and Supply Model', 7, 473.04236817761335]
+   DEBUG: 2024-09-18 11:11:14,115:      pdf_renderer.py:   53: 15, [3, 'Exchange rate Intervention', 7, 506.24236817761334]

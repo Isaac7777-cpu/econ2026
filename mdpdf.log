@@ -1,0 +1,536 @@
+    INFO: 2024-11-06 20:48:25,432:               log.py:   20: Logging to /Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/mdpdf.log
+   DEBUG: 2024-11-06 20:48:25,432:               cli.py:  103: Week8/Week8.md
+    INFO: 2024-11-06 20:48:25,432:         converter.py:   14: Week8/Week8.md
+   DEBUG: 2024-11-06 20:48:25,435:      pdf_renderer.py:  470: printSegment: The IS Curve
+   DEBUG: 2024-11-06 20:48:25,436:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,437:      pdf_renderer.py:  470: printSegment: Understanding unemployment rates
+   DEBUG: 2024-11-06 20:48:25,438:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,438:      pdf_renderer.py:  470: printSegment: Aggregate Demand - Aggregate Supply Framework
+   DEBUG: 2024-11-06 20:48:25,439:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,439:      pdf_renderer.py:  470: printSegment: Short change in GDP, caused by AD
+   DEBUG: 2024-11-06 20:48:25,439:      pdf_renderer.py:  470: printSegment: !
+   DEBUG: 2024-11-06 20:48:25,440:      pdf_renderer.py:  470: printSegment: IS => interest rate (r) and GDP (y)
+   DEBUG: 2024-11-06 20:48:25,440:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,440:      pdf_renderer.py:  470: printSegment: Why fluctuations happens => Identifying the problems
+   DEBUG: 2024-11-06 20:48:25,440:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,441:      pdf_renderer.py:  470: printSegment: Role of Monetary Policy in correcting fluctuations
+   DEBUG: 2024-11-06 20:48:25,441:      pdf_renderer.py:  470: printSegment: We need to understand:
+   DEBUG: 2024-11-06 20:48:25,441:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,442:      pdf_renderer.py:  470: printSegment: Two types of expenditures:
+   DEBUG: 2024-11-06 20:48:25,442:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,442:      pdf_renderer.py:  470: printSegment: Actual Expenditures
+   DEBUG: 2024-11-06 20:48:25,443:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,443:      pdf_renderer.py:  470: printSegment: Planned Expenditures
+   DEBUG: 2024-11-06 20:48:25,443:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,443:      pdf_renderer.py:  470: printSegment: Has implication in the GDP
+   DEBUG: 2024-11-06 20:48:25,443:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,444:      pdf_renderer.py:  470: printSegment: Hence, the change in planned expenditures is important
+   DEBUG: 2024-11-06 20:48:25,444:      pdf_renderer.py:  470: printSegment: Domestically produced goods and services
+   DEBUG: 2024-11-06 20:48:25,445:      pdf_renderer.py:  470: printSegment: 
+   DEBUG: 2024-11-06 20:48:25,445:      pdf_renderer.py:  470: printSegment: demand by four different factors:
+   DEBUG: 2024-11-06 20:48:25,446:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,446:      pdf_renderer.py:  470: printSegment: households
+   DEBUG: 2024-11-06 20:48:25,446:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,447:      pdf_renderer.py:  470: printSegment: Foreigns
+   DEBUG: 2024-11-06 20:48:25,447:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,447:      pdf_renderer.py:  470: printSegment: Firms
+   DEBUG: 2024-11-06 20:48:25,447:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,447:      pdf_renderer.py:  470: printSegment: Government
+   DEBUG: 2024-11-06 20:48:25,448:      pdf_renderer.py:  470: printSegment: aggregate demand (total amount of output, demand): $y^{ad}$
+   DEBUG: 2024-11-06 20:48:25,448:      pdf_renderer.py:  470: printSegment: $$Y^{ad} = 
+   DEBUG: 2024-11-06 20:48:25,448:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,449:      pdf_renderer.py:  470: printSegment: text{Planned Expenditure} = C + I + G + NX$$
+   DEBUG: 2024-11-06 20:48:25,449:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,449:      pdf_renderer.py:  470: printSegment: $C$ is the aggregate consumption
+   DEBUG: 2024-11-06 20:48:25,449:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,450:      pdf_renderer.py:  470: printSegment: $I$ is the planned investment spending
+   DEBUG: 2024-11-06 20:48:25,450:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,450:      pdf_renderer.py:  470: printSegment: $G$ Goverment purchases
+   DEBUG: 2024-11-06 20:48:25,451:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,451:      pdf_renderer.py:  470: printSegment: $NX$ Net export
+   DEBUG: 2024-11-06 20:48:25,451:      pdf_renderer.py:  470: printSegment: Consumption Expenditures (mainly made by Household)
+   DEBUG: 2024-11-06 20:48:25,451:      pdf_renderer.py:  470: printSegment: $$C = 
+   DEBUG: 2024-11-06 20:48:25,452:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,452:      pdf_renderer.py:  470: printSegment: bar{C} + cY
+   DEBUG: 2024-11-06 20:48:25,452:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,452:      pdf_renderer.py:  470: printSegment: D$$
+   DEBUG: 2024-11-06 20:48:25,453:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,453:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,453:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,455:      pdf_renderer.py:  470: printSegment: bar{C}$ is autonomous consumer expenditure: the amount of consumer expenditure that is
+   DEBUG: 2024-11-06 20:48:25,456:      pdf_renderer.py:  470: printSegment: independent of disposable income (how much will be spent when disposable income is zero)
+   DEBUG: 2024-11-06 20:48:25,456:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,457:      pdf_renderer.py:  470: printSegment: $c$ marginal propensity of consumption => Depends on how many you are consuming (powerpoint
+   DEBUG: 2024-11-06 20:48:25,457:      pdf_renderer.py:  470: printSegment: uses notation $mpc$)
+   DEBUG: 2024-11-06 20:48:25,458:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,458:      pdf_renderer.py:  470: printSegment: $Y
+   DEBUG: 2024-11-06 20:48:25,458:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,458:      pdf_renderer.py:  470: printSegment: D$ disposable income
+   DEBUG: 2024-11-06 20:48:25,459:      pdf_renderer.py:  470: printSegment: $$Y
+   DEBUG: 2024-11-06 20:48:25,459:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,459:      pdf_renderer.py:  470: printSegment: D = Y - T$$
+   DEBUG: 2024-11-06 20:48:25,459:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,460:      pdf_renderer.py:  470: printSegment: $Y$ is total income
+   DEBUG: 2024-11-06 20:48:25,460:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,460:      pdf_renderer.py:  470: printSegment: $T$ tax
+   DEBUG: 2024-11-06 20:48:25,461:      pdf_renderer.py:  470: printSegment: Investment
+   DEBUG: 2024-11-06 20:48:25,461:      pdf_renderer.py:  470: printSegment: Two types
+   DEBUG: 2024-11-06 20:48:25,461:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: Fixed Investment
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: New Housing, equipments, structures, etc
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: Always planned
+   DEBUG: 2024-11-06 20:48:25,462:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,463:      pdf_renderer.py:  470: printSegment: Inventory Investment
+   DEBUG: 2024-11-06 20:48:25,463:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,463:      pdf_renderer.py:  470: printSegment: Can be unplanned
+   DEBUG: 2024-11-06 20:48:25,463:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,463:      pdf_renderer.py:  470: printSegment: finish products, etc.
+   DEBUG: 2024-11-06 20:48:25,464:      pdf_renderer.py:  470: printSegment: Example: Toyota
+   DEBUG: 2024-11-06 20:48:25,464:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,464:      pdf_renderer.py:  470: printSegment: 31st Dec 2023: 100,000 cars inventory
+   DEBUG: 2024-11-06 20:48:25,464:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,465:      pdf_renderer.py:  470: printSegment: 31st Dec 2023: 150,000 cars inventory
+   DEBUG: 2024-11-06 20:48:25,465:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,465:      pdf_renderer.py:  470: printSegment: Change in inventory = 50,000
+   DEBUG: 2024-11-06 20:48:25,465:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,466:      pdf_renderer.py:  470: printSegment: Note that this an unplanned increase in inventory
+   DEBUG: 2024-11-06 20:48:25,466:      pdf_renderer.py:  470: printSegment: Import
+   DEBUG: 2024-11-06 20:48:25,466:      pdf_renderer.py:  470: printSegment: $$I = 
+   DEBUG: 2024-11-06 20:48:25,466:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,466:      pdf_renderer.py:  470: printSegment: text{(Planned) Fixed Investment} + 
+   DEBUG: 2024-11-06 20:48:25,467:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,467:      pdf_renderer.py:  470: printSegment: text{Planned Inventory Investment}$$
+   DEBUG: 2024-11-06 20:48:25,467:      pdf_renderer.py:  470: printSegment: Then, we can write this by decomposing into fixed part and other
+   DEBUG: 2024-11-06 20:48:25,467:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,468:      pdf_renderer.py:  470: printSegment: $$I = 
+   DEBUG: 2024-11-06 20:48:25,468:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,468:      pdf_renderer.py:  470: printSegment: bar{I} - d 
+   DEBUG: 2024-11-06 20:48:25,468:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,468:      pdf_renderer.py:  470: printSegment: cdot r
+   DEBUG: 2024-11-06 20:48:25,469:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,469:      pdf_renderer.py:  470: printSegment: c$$
+   DEBUG: 2024-11-06 20:48:25,469:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,469:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,469:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,470:      pdf_renderer.py:  470: printSegment: bar{I}$ autonomous investment (fixed)
+   DEBUG: 2024-11-06 20:48:25,470:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,470:      pdf_renderer.py:  470: printSegment: $d$ captures the responsiveness of investments
+   DEBUG: 2024-11-06 20:48:25,471:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,471:      pdf_renderer.py:  470: printSegment: $d 
+   DEBUG: 2024-11-06 20:48:25,471:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,471:      pdf_renderer.py:  470: printSegment: in 
+   DEBUG: 2024-11-06 20:48:25,471:      pdf_renderer.py:  470: printSegment: [
+   DEBUG: 2024-11-06 20:48:25,472:      pdf_renderer.py:  470: printSegment: 0,1
+   DEBUG: 2024-11-06 20:48:25,472:      pdf_renderer.py:  470: printSegment: ]
+   DEBUG: 2024-11-06 20:48:25,472:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,472:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,473:      pdf_renderer.py:  470: printSegment: if $d$ is zero, then it is not responsive at all.
+   DEBUG: 2024-11-06 20:48:25,473:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,473:      pdf_renderer.py:  470: printSegment: $rc$ the real cost of investment / real cost of borrowing => very related to the real interest rate.
+   DEBUG: 2024-11-06 20:48:25,473:      pdf_renderer.py:  470: printSegment: Firms Decision
+   DEBUG: 2024-11-06 20:48:25,474:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,474:      pdf_renderer.py:  470: printSegment: Firms without excess funds
+   DEBUG: 2024-11-06 20:48:25,474:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,475:      pdf_renderer.py:  470: printSegment: Need to borrow to make an investment
+   DEBUG: 2024-11-06 20:48:25,475:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,476:      pdf_renderer.py:  470: printSegment: Borrow and invest only if the rate of return from investment is larger than the real
+   DEBUG: 2024-11-06 20:48:25,476:      pdf_renderer.py:  470: printSegment: cost of investment ($rc$)
+   DEBUG: 2024-11-06 20:48:25,476:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,476:      pdf_renderer.py:  470: printSegment: Firms with excess funds
+   DEBUG: 2024-11-06 20:48:25,477:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,477:      pdf_renderer.py:  470: printSegment: Do not need to borrow
+   DEBUG: 2024-11-06 20:48:25,477:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,478:      pdf_renderer.py:  470: printSegment: Invest only if rate of return > Opportunitiy cost of investment => $r
+   DEBUG: 2024-11-06 20:48:25,478:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,478:      pdf_renderer.py:  470: printSegment: c$
+   DEBUG: 2024-11-06 20:48:25,478:      pdf_renderer.py:  470: printSegment: $$r
+   DEBUG: 2024-11-06 20:48:25,479:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,479:      pdf_renderer.py:  470: printSegment: c = r + 
+   DEBUG: 2024-11-06 20:48:25,479:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,479:      pdf_renderer.py:  470: printSegment: bar{f}$$
+   DEBUG: 2024-11-06 20:48:25,480:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,480:      pdf_renderer.py:  470: printSegment: $r$ real interest rate
+   DEBUG: 2024-11-06 20:48:25,480:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,480:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,481:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,481:      pdf_renderer.py:  470: printSegment: bar{f}$ financial frictions
+   DEBUG: 2024-11-06 20:48:25,481:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,482:      pdf_renderer.py:  470: printSegment: The cost you have to pay when you try perform financing
+   DEBUG: 2024-11-06 20:48:25,482:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,482:      pdf_renderer.py:  470: printSegment: Direcly related to asymmetric information
+   DEBUG: 2024-11-06 20:48:25,482:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,483:      pdf_renderer.py:  470: printSegment: Adverse Selection
+   DEBUG: 2024-11-06 20:48:25,483:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,483:      pdf_renderer.py:  470: printSegment: You don
+   DEBUG: 2024-11-06 20:48:25,484:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-11-06 20:48:25,484:      pdf_renderer.py:  470: printSegment: t know as much as the person who is
+   DEBUG: 2024-11-06 20:48:25,484:      pdf_renderer.py:  470: printSegment: lending you money
+   DEBUG: 2024-11-06 20:48:25,485:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,485:      pdf_renderer.py:  470: printSegment: Moral Hozard
+   DEBUG: 2024-11-06 20:48:25,485:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,486:      pdf_renderer.py:  470: printSegment: They might change the behaviour and not pay back
+   DEBUG: 2024-11-06 20:48:25,486:      pdf_renderer.py:  470: printSegment: During a recession, the risk increases substantially.
+   DEBUG: 2024-11-06 20:48:25,486:      pdf_renderer.py:  470: printSegment: Now, we can write the investment function as follow:
+   DEBUG: 2024-11-06 20:48:25,486:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,486:      pdf_renderer.py:  470: printSegment: $$I = 
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: bar{I} - d(r + 
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: bar{f})$$
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,487:      pdf_renderer.py:  470: printSegment: Increase in $
+   DEBUG: 2024-11-06 20:48:25,488:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,488:      pdf_renderer.py:  470: printSegment: bar{I}$ increases $I$
+   DEBUG: 2024-11-06 20:48:25,488:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,488:      pdf_renderer.py:  470: printSegment: Decrease in $r$ increases $I$
+   DEBUG: 2024-11-06 20:48:25,488:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,489:      pdf_renderer.py:  470: printSegment: Decrease in financial friction increases $I$
+   DEBUG: 2024-11-06 20:48:25,489:      pdf_renderer.py:  470: printSegment: Net Export Function
+   DEBUG: 2024-11-06 20:48:25,489:      pdf_renderer.py:  470: printSegment: $$NX = 
+   DEBUG: 2024-11-06 20:48:25,490:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,490:      pdf_renderer.py:  470: printSegment: bar{NX} - xr$$
+   DEBUG: 2024-11-06 20:48:25,490:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,490:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,490:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,491:      pdf_renderer.py:  470: printSegment: bar{NX}$ autonomous net export
+   DEBUG: 2024-11-06 20:48:25,491:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,491:      pdf_renderer.py:  470: printSegment: $x$ responsiveness of NX
+   DEBUG: 2024-11-06 20:48:25,491:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,492:      pdf_renderer.py:  470: printSegment: $0 
+   DEBUG: 2024-11-06 20:48:25,492:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,492:      pdf_renderer.py:  470: printSegment: leq x 
+   DEBUG: 2024-11-06 20:48:25,492:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,492:      pdf_renderer.py:  470: printSegment: leq 1$
+   DEBUG: 2024-11-06 20:48:25,493:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,493:      pdf_renderer.py:  470: printSegment: $r$ reall interest rate
+   DEBUG: 2024-11-06 20:48:25,493:      pdf_renderer.py:  470: printSegment: Inference:
+   DEBUG: 2024-11-06 20:48:25,496:      pdf_renderer.py:  470: printSegment: increase in domestic interest rate => increase in demand in domestic asset => increase in domestic currency
+   DEBUG: 2024-11-06 20:48:25,496:      pdf_renderer.py:  470: printSegment: (appreciation) => increase in import and decrease in export => decrease in net export.
+   DEBUG: 2024-11-06 20:48:25,496:      pdf_renderer.py:  470: printSegment: Government Expenditure (G)
+   DEBUG: 2024-11-06 20:48:25,497:      pdf_renderer.py:  470: printSegment: $$G = 
+   DEBUG: 2024-11-06 20:48:25,497:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,497:      pdf_renderer.py:  470: printSegment: bar{G}$$
+   DEBUG: 2024-11-06 20:48:25,497:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,497:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,498:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,498:      pdf_renderer.py:  470: printSegment: bar{G}$ fixed autonomous expenditure
+   DEBUG: 2024-11-06 20:48:25,498:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,498:      pdf_renderer.py:  470: printSegment: $$T = 
+   DEBUG: 2024-11-06 20:48:25,499:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,499:      pdf_renderer.py:  470: printSegment: bar{T}$$
+   DEBUG: 2024-11-06 20:48:25,499:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,499:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,500:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,500:      pdf_renderer.py:  470: printSegment: bar{T}$ fixed taxes
+   DEBUG: 2024-11-06 20:48:25,500:      pdf_renderer.py:  470: printSegment: Hence,
+   DEBUG: 2024-11-06 20:48:25,500:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,501:      pdf_renderer.py:  470: printSegment: $$Y
+   DEBUG: 2024-11-06 20:48:25,501:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,501:      pdf_renderer.py:  470: printSegment: D = Y - T 
+   DEBUG: 2024-11-06 20:48:25,501:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,502:      pdf_renderer.py:  470: printSegment: implies Y
+   DEBUG: 2024-11-06 20:48:25,502:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,502:      pdf_renderer.py:  470: printSegment: D = Y - 
+   DEBUG: 2024-11-06 20:48:25,502:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,502:      pdf_renderer.py:  470: printSegment: bar{T}$$
+   DEBUG: 2024-11-06 20:48:25,503:      pdf_renderer.py:  470: printSegment: Hence, increase in t bar will lead to decrease in a aggregate demand and hence decrease in consumption expenditure.
+   DEBUG: 2024-11-06 20:48:25,503:      pdf_renderer.py:  470: printSegment: Goods Market Equilibrium
+   DEBUG: 2024-11-06 20:48:25,504:      pdf_renderer.py:  470: printSegment: total quantity of output = total amount of agg. demand
+   DEBUG: 2024-11-06 20:48:25,504:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,504:      pdf_renderer.py:  470: printSegment: $$Y = Y^{ad}$$
+   DEBUG: 2024-11-06 20:48:25,504:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,505:      pdf_renderer.py:  470: printSegment: This means that what is planned should be
+   DEBUG: 2024-11-06 20:48:25,505:      pdf_renderer.py:  470: printSegment: what you demand.
+   DEBUG: 2024-11-06 20:48:25,505:      pdf_renderer.py:  470: printSegment: Hence, using the equation above,
+   DEBUG: 2024-11-06 20:48:25,506:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,506:      pdf_renderer.py:  470: printSegment: $$Y = Y^{ad} = 
+   DEBUG: 2024-11-06 20:48:25,506:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,507:      pdf_renderer.py:  470: printSegment: text{Planned Expenditure} = C + I + G + NX$$
+   DEBUG: 2024-11-06 20:48:25,507:      pdf_renderer.py:  470: printSegment: Hence,
+   DEBUG: 2024-11-06 20:48:25,507:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,507:      pdf_renderer.py:  470: printSegment: $$Y = 
+   DEBUG: 2024-11-06 20:48:25,508:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,508:      pdf_renderer.py:  470: printSegment: bar{C} + cY
+   DEBUG: 2024-11-06 20:48:25,508:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,509:      pdf_renderer.py:  470: printSegment: D +  
+   DEBUG: 2024-11-06 20:48:25,509:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,509:      pdf_renderer.py:  470: printSegment: bar{I} - d(r + 
+   DEBUG: 2024-11-06 20:48:25,509:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,510:      pdf_renderer.py:  470: printSegment: bar{f}) + 
+   DEBUG: 2024-11-06 20:48:25,510:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,510:      pdf_renderer.py:  470: printSegment: bar{G} + 
+   DEBUG: 2024-11-06 20:48:25,510:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,511:      pdf_renderer.py:  470: printSegment: bar{NX} - xr$$
+   DEBUG: 2024-11-06 20:48:25,511:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,511:      pdf_renderer.py:  470: printSegment: Then, we can colect the
+   DEBUG: 2024-11-06 20:48:25,512:      pdf_renderer.py:  470: printSegment: autonomous term ($
+   DEBUG: 2024-11-06 20:48:25,512:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,512:      pdf_renderer.py:  470: printSegment: bar{A}$)
+   DEBUG: 2024-11-06 20:48:25,512:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,513:      pdf_renderer.py:  470: printSegment: $$Y = (
+   DEBUG: 2024-11-06 20:48:25,513:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,513:      pdf_renderer.py:  470: printSegment: bar{C} - c
+   DEBUG: 2024-11-06 20:48:25,514:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,514:      pdf_renderer.py:  470: printSegment: bar{T} + 
+   DEBUG: 2024-11-06 20:48:25,514:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,514:      pdf_renderer.py:  470: printSegment: bar{I} - d
+   DEBUG: 2024-11-06 20:48:25,515:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,515:      pdf_renderer.py:  470: printSegment: bar{f} + 
+   DEBUG: 2024-11-06 20:48:25,515:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,516:      pdf_renderer.py:  470: printSegment: bar{G} + 
+   DEBUG: 2024-11-06 20:48:25,516:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,516:      pdf_renderer.py:  470: printSegment: bar{NX}) + cY
+   DEBUG: 2024-11-06 20:48:25,516:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,517:      pdf_renderer.py:  470: printSegment: D - d 
+   DEBUG: 2024-11-06 20:48:25,517:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,517:      pdf_renderer.py:  470: printSegment: cdot r
+   DEBUG: 2024-11-06 20:48:25,518:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2024-11-06 20:48:25,518:      pdf_renderer.py:  470: printSegment: c - xr$$
+   DEBUG: 2024-11-06 20:48:25,518:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,518:      pdf_renderer.py:  470: printSegment: Hence,
+   DEBUG: 2024-11-06 20:48:25,519:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,519:      pdf_renderer.py:  470: printSegment: $$Y = 
+   DEBUG: 2024-11-06 20:48:25,519:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,520:      pdf_renderer.py:  470: printSegment: bar{A} + (cY - dr -xr)$$
+   DEBUG: 2024-11-06 20:48:25,520:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,520:      pdf_renderer.py:  470: printSegment: With simple rearranging:
+   DEBUG: 2024-11-06 20:48:25,521:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,521:      pdf_renderer.py:  470: printSegment: $$ Y = 
+   DEBUG: 2024-11-06 20:48:25,521:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,521:      pdf_renderer.py:  470: printSegment: frac{
+   DEBUG: 2024-11-06 20:48:25,522:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,522:      pdf_renderer.py:  470: printSegment: bar{A}}{1 - c} - 
+   DEBUG: 2024-11-06 20:48:25,522:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,523:      pdf_renderer.py:  470: printSegment: frac{d + x}{1 - c}r $$
+   DEBUG: 2024-11-06 20:48:25,523:      pdf_renderer.py:  470: printSegment: This is then known as the IS curve equation.
+   DEBUG: 2024-11-06 20:48:25,524:      pdf_renderer.py:  470: printSegment: Note that the first term will shift the IS curve and the next term move along the IS curve.
+   DEBUG: 2024-11-06 20:48:25,524:      pdf_renderer.py:  470: printSegment: Any increase in the autonomous term of C, I, G, and NX or decrease in T or f will lead to shift in IS curves to the
+   DEBUG: 2024-11-06 20:48:25,525:      pdf_renderer.py:  470: printSegment: right.
+   DEBUG: 2024-11-06 20:48:25,525:      pdf_renderer.py:  470: printSegment: Then, by calculating the two coefficients, we obtain the IS curve.
+   DEBUG: 2024-11-06 20:48:25,526:      pdf_renderer.py:  470: printSegment: Actual output > Aeg Demand => Uncold imasfasnf... => cut production
+   DEBUG: 2024-11-06 20:48:25,526:      pdf_renderer.py:  470: printSegment: Actual output 
+   DEBUG: 2024-11-06 20:48:25,526:      pdf_renderer.py:  470: printSegment: <
+   DEBUG: 2024-11-06 20:48:25,526:      pdf_renderer.py:  470: printSegment:  aeg demand => increase in production
+   DEBUG: 2024-11-06 20:48:25,528:      pdf_renderer.py:  470: printSegment: Suppose there is an increase => then the shift increases. Then, we have a new IS curve that is shifted to the right.
+   DEBUG: 2024-11-06 20:48:25,528:      pdf_renderer.py:  470: printSegment: Then with the same interest rate would produce higher demand.
+   DEBUG: 2024-11-06 20:48:25,529:      pdf_renderer.py:  470: printSegment: Also, suppose there is an increase in the tax, then at the same level of interest rate, then aggregate demand will
+   DEBUG: 2024-11-06 20:48:25,529:      pdf_renderer.py:  470: printSegment: decrease.
+   DEBUG: 2024-11-06 20:48:25,529:      pdf_renderer.py:  470: printSegment: Central Bank and Monetary Policy (MP)
+   DEBUG: 2024-11-06 20:48:25,529:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,530:      pdf_renderer.py:  470: printSegment: Understand how MP affects AD
+   DEBUG: 2024-11-06 20:48:25,530:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,530:      pdf_renderer.py:  470: printSegment: CBs use the short-term nominal interest rate (policy rate) as their main tool
+   DEBUG: 2024-11-06 20:48:25,531:      pdf_renderer.py:  470: printSegment: !
+   DEBUG: 2024-11-06 20:48:25,531:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,531:      pdf_renderer.py:  470: printSegment: in the federal funds market => inter-bank borrowing and borrowing from the CB
+   DEBUG: 2024-11-06 20:48:25,531:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,532:      pdf_renderer.py:  470: printSegment: This market is not open to us.
+   DEBUG: 2024-11-06 20:48:25,532:      pdf_renderer.py:  470: printSegment: How the Policy Rate is Determined?
+   DEBUG: 2024-11-06 20:48:25,532:      pdf_renderer.py:  470: printSegment: Denote policy rate here by ($i$)
+   DEBUG: 2024-11-06 20:48:25,532:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,533:      pdf_renderer.py:  470: printSegment: policy rate is the nominal rate
+   DEBUG: 2024-11-06 20:48:25,533:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,533:      pdf_renderer.py:  470: printSegment: Real interest rate ($r$) affects NX and I
+   DEBUG: 2024-11-06 20:48:25,533:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,534:      pdf_renderer.py:  470: printSegment: $r = i - 
+   DEBUG: 2024-11-06 20:48:25,534:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,534:      pdf_renderer.py:  470: printSegment: pi^e$ => Simplified Fisher
+   DEBUG: 2024-11-06 20:48:25,534:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-11-06 20:48:25,535:      pdf_renderer.py:  470: printSegment: s Equation
+   DEBUG: 2024-11-06 20:48:25,535:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,535:      pdf_renderer.py:  470: printSegment: real interest rate is the difference between the nominal interest rate and expected
+   DEBUG: 2024-11-06 20:48:25,536:      pdf_renderer.py:  470: printSegment: inflation rate.
+   DEBUG: 2024-11-06 20:48:25,536:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,536:      pdf_renderer.py:  470: printSegment: Change the nominal interest rate ($i$) will affect $r$ if inflation expectation is constant.
+   DEBUG: 2024-11-06 20:48:25,536:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,537:      pdf_renderer.py:  470: printSegment: Usually the inflation expectation does not change that quick.
+   DEBUG: 2024-11-06 20:48:25,537:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,537:      pdf_renderer.py:  470: printSegment: It sticks around a bit
+   DEBUG: 2024-11-06 20:48:25,538:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,538:      pdf_renderer.py:  470: printSegment: Prices are 
+   DEBUG: 2024-11-06 20:48:25,538:      pdf_renderer.py:  470: printSegment: STICKY
+   DEBUG: 2024-11-06 20:48:25,538:      pdf_renderer.py:  470: printSegment:  => Price changes are 
+   DEBUG: 2024-11-06 20:48:25,539:      pdf_renderer.py:  470: printSegment: SLOW
+   DEBUG: 2024-11-06 20:48:25,539:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,539:      pdf_renderer.py:  470: printSegment: Hence, CB
+   DEBUG: 2024-11-06 20:48:25,540:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-11-06 20:48:25,540:      pdf_renderer.py:  470: printSegment: s MP will work.
+   DEBUG: 2024-11-06 20:48:25,540:      pdf_renderer.py:  470: printSegment: Monetary Policy Curve Equation
+   DEBUG: 2024-11-06 20:48:25,540:      pdf_renderer.py:  470: printSegment: CB
+   DEBUG: 2024-11-06 20:48:25,541:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2024-11-06 20:48:25,541:      pdf_renderer.py:  470: printSegment: s aim is always to change the real interest rate. The equation is given as the following:
+   DEBUG: 2024-11-06 20:48:25,541:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,542:      pdf_renderer.py:  470: printSegment: $$r = 
+   DEBUG: 2024-11-06 20:48:25,542:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,542:      pdf_renderer.py:  470: printSegment: bar{r} + 
+   DEBUG: 2024-11-06 20:48:25,542:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,543:      pdf_renderer.py:  470: printSegment: lambda
+   DEBUG: 2024-11-06 20:48:25,543:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,543:      pdf_renderer.py:  470: printSegment: pi$$
+   DEBUG: 2024-11-06 20:48:25,543:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,544:      pdf_renderer.py:  470: printSegment: where
+   DEBUG: 2024-11-06 20:48:25,544:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,544:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,545:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,545:      pdf_renderer.py:  470: printSegment: bar{r}$ is the autonomous component of real interest rate
+   DEBUG: 2024-11-06 20:48:25,545:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,545:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,546:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,546:      pdf_renderer.py:  470: printSegment: lambda$ is the responsiveness of real interest rate to change tin $
+   DEBUG: 2024-11-06 20:48:25,546:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,547:      pdf_renderer.py:  470: printSegment: pi$
+   DEBUG: 2024-11-06 20:48:25,547:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,547:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,547:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,548:      pdf_renderer.py:  470: printSegment: pi$ is the inflation rate.
+   DEBUG: 2024-11-06 20:48:25,548:      pdf_renderer.py:  470: printSegment: Why we have this upward monetary policy curve (why it is in this form)?
+   DEBUG: 2024-11-06 20:48:25,549:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,549:      pdf_renderer.py:  470: printSegment: Price Stabilisation => CBs follow 
+   DEBUG: 2024-11-06 20:48:25,549:      pdf_renderer.py:  470: printSegment: TAYLOR PRINCIPLE
+   DEBUG: 2024-11-06 20:48:25,549:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,550:      pdf_renderer.py:  470: printSegment: Taylor Principle:
+   DEBUG: 2024-11-06 20:48:25,550:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,550:      pdf_renderer.py:  470: printSegment: Increase in policy rates by more than any raise in $
+   DEBUG: 2024-11-06 20:48:25,551:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,552:      pdf_renderer.py:  470: printSegment: pi^e$ so that the increase in real
+   DEBUG: 2024-11-06 20:48:25,552:      pdf_renderer.py:  470: printSegment: interest rate when there is the raise in inflation.
+   DEBUG: 2024-11-06 20:48:25,552:      pdf_renderer.py:  470: printSegment: Q: What happen if we do not follow Taylor Principle?
+   DEBUG: 2024-11-06 20:48:25,553:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,558:      pdf_renderer.py:  470: printSegment: When there is a increase in inflation rate will decrease the
+   DEBUG: 2024-11-06 20:48:25,561:      pdf_renderer.py:  470: printSegment: real interest rate. Then this will lead to increase in GDP and causes another increase in inflation. This loop will keep
+   DEBUG: 2024-11-06 20:48:25,561:      pdf_renderer.py:  470: printSegment: going up, known as a Hyper Inflation (2020 - 2023 in Turkey).
+   DEBUG: 2024-11-06 20:48:25,561:      pdf_renderer.py:  470: printSegment: Shifts in MP
+   DEBUG: 2024-11-06 20:48:25,562:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,562:      pdf_renderer.py:  470: printSegment: Expansionary MP (MP easing) => decrease in real interest rate
+   DEBUG: 2024-11-06 20:48:25,562:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,562:      pdf_renderer.py:  470: printSegment: Contractionary MP (MP tightning) => increase in real interest rate
+   DEBUG: 2024-11-06 20:48:25,563:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,563:      pdf_renderer.py:  470: printSegment: Autonomous easing of MP => decrease in $
+   DEBUG: 2024-11-06 20:48:25,563:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,563:      pdf_renderer.py:  470: printSegment: bar{r}$
+   DEBUG: 2024-11-06 20:48:25,563:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,564:      pdf_renderer.py:  470: printSegment: Autonomous tightning of MP => increase in $
+   DEBUG: 2024-11-06 20:48:25,564:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,564:      pdf_renderer.py:  470: printSegment: bar{r}$
+   DEBUG: 2024-11-06 20:48:25,564:      pdf_renderer.py:  470: printSegment: Generic Formula for AD
+   DEBUG: 2024-11-06 20:48:25,564:      pdf_renderer.py:  470: printSegment: IS:
+   DEBUG: 2024-11-06 20:48:25,565:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,565:      pdf_renderer.py:  470: printSegment: $$ Y = 
+   DEBUG: 2024-11-06 20:48:25,565:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,565:      pdf_renderer.py:  470: printSegment: frac{
+   DEBUG: 2024-11-06 20:48:25,565:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,566:      pdf_renderer.py:  470: printSegment: bar{A}}{1 - c} - 
+   DEBUG: 2024-11-06 20:48:25,566:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,566:      pdf_renderer.py:  470: printSegment: frac{d + x}{1 - c}r $$
+   DEBUG: 2024-11-06 20:48:25,566:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,567:      pdf_renderer.py:  470: printSegment: where,
+   DEBUG: 2024-11-06 20:48:25,567:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,567:      pdf_renderer.py:  470: printSegment: $$ 
+   DEBUG: 2024-11-06 20:48:25,567:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,567:      pdf_renderer.py:  470: printSegment: bar{A} = 
+   DEBUG: 2024-11-06 20:48:25,568:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,568:      pdf_renderer.py:  470: printSegment: bar{C} - c
+   DEBUG: 2024-11-06 20:48:25,568:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,568:      pdf_renderer.py:  470: printSegment: bar{T} + 
+   DEBUG: 2024-11-06 20:48:25,568:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,569:      pdf_renderer.py:  470: printSegment: bar{I} - d
+   DEBUG: 2024-11-06 20:48:25,569:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,569:      pdf_renderer.py:  470: printSegment: bar{f} + 
+   DEBUG: 2024-11-06 20:48:25,569:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,569:      pdf_renderer.py:  470: printSegment: bar{G} + 
+   DEBUG: 2024-11-06 20:48:25,570:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,570:      pdf_renderer.py:  470: printSegment: bar{NX}$$
+   DEBUG: 2024-11-06 20:48:25,570:      pdf_renderer.py:  470: printSegment: MP:
+   DEBUG: 2024-11-06 20:48:25,570:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,571:      pdf_renderer.py:  470: printSegment: $$r = 
+   DEBUG: 2024-11-06 20:48:25,571:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,571:      pdf_renderer.py:  470: printSegment: bar{r} + 
+   DEBUG: 2024-11-06 20:48:25,571:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,571:      pdf_renderer.py:  470: printSegment: lambda
+   DEBUG: 2024-11-06 20:48:25,572:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,572:      pdf_renderer.py:  470: printSegment: pi$$
+   DEBUG: 2024-11-06 20:48:25,572:      pdf_renderer.py:  470: printSegment: Hence, the AD equation:
+   DEBUG: 2024-11-06 20:48:25,572:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,573:      pdf_renderer.py:  470: printSegment: $$ Y = 
+   DEBUG: 2024-11-06 20:48:25,573:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,573:      pdf_renderer.py:  470: printSegment: frac{
+   DEBUG: 2024-11-06 20:48:25,573:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,574:      pdf_renderer.py:  470: printSegment: bar{A}}{1 - c} - 
+   DEBUG: 2024-11-06 20:48:25,574:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,574:      pdf_renderer.py:  470: printSegment: frac{d + x}{1 - c}(
+   DEBUG: 2024-11-06 20:48:25,574:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,574:      pdf_renderer.py:  470: printSegment: bar{r} + 
+   DEBUG: 2024-11-06 20:48:25,575:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,575:      pdf_renderer.py:  470: printSegment: lambda
+   DEBUG: 2024-11-06 20:48:25,575:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,575:      pdf_renderer.py:  470: printSegment: pi) $$
+   DEBUG: 2024-11-06 20:48:25,576:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,576:      pdf_renderer.py:  470: printSegment: where,
+   DEBUG: 2024-11-06 20:48:25,576:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2024-11-06 20:48:25,576:      pdf_renderer.py:  470: printSegment: $$ 
+   DEBUG: 2024-11-06 20:48:25,577:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,577:      pdf_renderer.py:  470: printSegment: bar{A} = 
+   DEBUG: 2024-11-06 20:48:25,577:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,577:      pdf_renderer.py:  470: printSegment: bar{C} - c
+   DEBUG: 2024-11-06 20:48:25,577:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,578:      pdf_renderer.py:  470: printSegment: bar{T} + 
+   DEBUG: 2024-11-06 20:48:25,578:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,578:      pdf_renderer.py:  470: printSegment: bar{I} - d
+   DEBUG: 2024-11-06 20:48:25,578:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,579:      pdf_renderer.py:  470: printSegment: bar{f} + 
+   DEBUG: 2024-11-06 20:48:25,579:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,579:      pdf_renderer.py:  470: printSegment: bar{G} + 
+   DEBUG: 2024-11-06 20:48:25,579:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,580:      pdf_renderer.py:  470: printSegment: bar{NX}$$
+   DEBUG: 2024-11-06 20:48:25,580:      pdf_renderer.py:  470: printSegment: Hence, shifts in AD
+   DEBUG: 2024-11-06 20:48:25,580:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,581:      pdf_renderer.py:  470: printSegment: Shift in IS curve $
+   DEBUG: 2024-11-06 20:48:25,581:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,581:      pdf_renderer.py:  470: printSegment: impliedby$ change in the autonomous term
+   DEBUG: 2024-11-06 20:48:25,581:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,582:      pdf_renderer.py:  470: printSegment: Right shiftting:
+   DEBUG: 2024-11-06 20:48:25,582:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,582:      pdf_renderer.py:  470: printSegment: increase in C, I, G, NX autonomous
+   DEBUG: 2024-11-06 20:48:25,582:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,583:      pdf_renderer.py:  470: printSegment: decrease in T, I autonomous
+   DEBUG: 2024-11-06 20:48:25,583:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,583:      pdf_renderer.py:  470: printSegment: Shift in MP curve $
+   DEBUG: 2024-11-06 20:48:25,584:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,584:      pdf_renderer.py:  470: printSegment: impliedby$ change in monetary policy
+   DEBUG: 2024-11-06 20:48:25,584:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,584:      pdf_renderer.py:  470: printSegment: Contractionary MP:
+   DEBUG: 2024-11-06 20:48:25,585:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,585:      pdf_renderer.py:  470: printSegment: $
+   DEBUG: 2024-11-06 20:48:25,585:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,586:      pdf_renderer.py:  470: printSegment: bar{i}$ increase shifts MP up $
+   DEBUG: 2024-11-06 20:48:25,586:      pdf_renderer.py:  470: printSegment: \
+   DEBUG: 2024-11-06 20:48:25,586:      pdf_renderer.py:  470: printSegment: implies$ AD will shift to left
+   DEBUG: 2024-11-06 20:48:25,587:      pdf_renderer.py:  470: printSegment: (contration)
+   DEBUG: 2024-11-06 20:48:25,587:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,587:      pdf_renderer.py:  470: printSegment: Expansionary MP:
+   DEBUG: 2024-11-06 20:48:25,587:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:  470: printSegment: vice versa
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 0, [1, 'The IS Curve', 1, 68.0]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 1, [2, 'Consumption Expenditures (mainly made by Household)', 1, 520.0]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 2, [3, 'Investment', 1, 697.1999999999999]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 3, [4, 'Example: Toyota', 2, 212.0]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 4, [2, 'Import', 2, 308.8]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 5, [4, 'Firms Decision', 2, 461.6]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 6, [2, 'Net Export Function', 3, 230.8]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 7, [2, 'Government Expenditure (G)', 3, 396.40000000000003]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 8, [2, 'Goods Market Equilibrium', 3, 520.0]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 9, [1, 'Central Bank and Monetary Policy (MP)', 4, 195.2]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 10, [2, 'How the Policy Rate is Determined?', 4, 305.2]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 11, [2, 'Monetary Policy Curve Equation', 4, 512.8]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 12, [3, 'Shifts in MP', 5, 110.4]
+   DEBUG: 2024-11-06 20:48:25,588:      pdf_renderer.py:   53: 13, [2, 'Generic Formula for AD', 5, 199.60000000000002]
+   ERROR: 2024-11-06 20:48:25,588:      pdf_renderer.py:   57: Bad heading level.  More information:
+Traceback (most recent call last):
+  File "/Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/econ2026/lib/python3.12/site-packages/mdpdf/pdf_renderer.py", line 55, in __del__
+    self.doc.set_toc(self.toc)
+  File "/Users/isaacleong/Library/CloudStorage/OneDrive-AustralianNationalUniversity/work/Year_2/Sem_2/ECON2026/econ2026/lib/python3.12/site-packages/pymupdf/utils.py", line 1357, in set_toc
+    raise ValueError("bad hierarchy level in row %i" % (i + 1))
+ValueError: bad hierarchy level in row 5
+    INFO: 2024-11-06 20:48:25,589:      pdf_renderer.py:   59: [4, 'Firms Decision', 2, 461.6]

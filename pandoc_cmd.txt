@@ -1,0 +1,4 @@
+pandoc week3.md -o week3-notes.pdf --pdf-engine=xelatex --template=template.tex -V mainfont="Heiti SC"
+
+**Remember to change the title
+** This should be executed in the same directory as the md
