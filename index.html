@@ -63,6 +63,11 @@
         <h2>Ping Pong Game</h2>
         <canvas id="game" width="600" height="400"></canvas>
     </div>
+    <div id="controls">
+        <!-- <button onclick="simulateTilt(-15)">Tilt Left</button>
+        <button onclick="simulateTilt(0)">Neutral</button>
+        <button onclick="simulateTilt(15)">Tilt Right</button> -->
+    </div>
     <script>
         const canvas = document.getElementById('game');
         const context = canvas.getContext('2d');
@@ -216,9 +221,15 @@
         window.addEventListener('deviceorientation', (event) => {
             if (gameStarted) {
                 const tilt = event.gamma; // left-to-right tilt in degrees
-                player.dy = tilt > 10 ? 6 : tilt < -10 ? -6 : 0;
+                player.dy = tilt > 5 ? 6 : tilt < -5 ? -6 : 0;
             }
-        });
+        }, true);
+
+        // function simulateTilt(tilt) {
+        //     if (gameStarted) {
+        //         player.dy = tilt > 10 ? 6 : tilt < -10 ? -6 : 0;
+        //     }
+        // }
 
         loop();
     </script>
